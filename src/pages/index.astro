@@ -1,5 +1,5 @@
 ---
-// Astro Page Component - Arnab Chakraborty Lookbook Portfolio
+// Astro Page Component - Visual Lookbook Portfolio for Arnab Chakraborty
 ---
 
 <html lang="en" class="scroll-smooth">
@@ -12,7 +12,6 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 		<style>
-			/* Dynamic Marquee */
 			@keyframes marquee {
 				0% { transform: translateX(0%); }
 				100% { transform: translateX(-50%); }
@@ -34,7 +33,6 @@
 					linear-gradient(to right, rgba(229, 226, 220, 0.025) 1px, transparent 1px),
 					linear-gradient(to bottom, rgba(229, 226, 220, 0.025) 1px, transparent 1px);
 			}
-			/* Liquid Titanium Glass Panel */
 			.titanium-glass {
 				background: rgba(255, 255, 255, 0.03);
 				backdrop-filter: blur(28px) saturate(180%);
@@ -52,18 +50,26 @@
 			.font-mono-tech {
 				font-family: 'Space Mono', monospace;
 			}
+			.img-grayscale-hover {
+				filter: grayscale(100%) contrast(110%);
+				transition: filter 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+			}
+			.group:hover .img-grayscale-hover {
+				filter: grayscale(0%) contrast(100%);
+				transform: scale(1.04);
+			}
 		</style>
 	</head>
 	<body class="bg-canvas text-[#E5E2DC] font-['Plus_Jakarta_Sans'] antialiased selection:bg-[#E5E2DC] selection:text-black overflow-x-hidden">
 
-		<!-- Environmental Lighting & Grid -->
+		<!-- Environmental Background Overlay -->
 		<div class="fixed inset-0 bg-lookbook-grid pointer-events-none z-0 opacity-100"></div>
 		<div class="fixed inset-0 pointer-events-none z-0">
 			<div class="absolute top-[-10%] left-[20%] w-[600px] h-[600px] rounded-full bg-white/[0.02] blur-[150px]"></div>
 			<div class="absolute bottom-[-10%] right-[10%] w-[700px] h-[700px] rounded-full bg-amber-500/[0.015] blur-[180px]"></div>
 		</div>
 
-		<!-- Navigation Dock -->
+		<!-- Navigation -->
 		<nav class="fixed top-0 left-0 w-full z-50 px-4 sm:px-8 py-6">
 			<div class="max-w-7xl mx-auto titanium-glass rounded-full px-6 py-3.5 flex items-center justify-between">
 				<a href="#" class="flex items-center gap-3 group">
@@ -72,10 +78,10 @@
 				</a>
 				
 				<div class="hidden lg:flex items-center gap-8 text-[10px] uppercase tracking-[0.25em] font-mono-tech text-zinc-400">
-					<a href="#manifesto" class="hover:text-white transition-colors">01. Journey</a>
-					<a href="#exhibition" class="hover:text-white transition-colors">02. Portfolio</a>
-					<a href="#forecasts" class="hover:text-white transition-colors">03. Forecasts</a>
-					<a href="#culture" class="hover:text-white transition-colors">04. Culture</a>
+					<a href="#manifesto" class="hover:text-white transition-colors">INDEX // 01. THESIS</a>
+					<a href="#exhibition" class="hover:text-white transition-colors">INDEX // 02. PORTFOLIO</a>
+					<a href="#lookbook" class="hover:text-white transition-colors">INDEX // 03. GALLERY</a>
+					<a href="#forecasts" class="hover:text-white transition-colors">INDEX // 04. FORESIGHT</a>
 				</div>
 
 				<div class="flex items-center gap-4">
@@ -87,46 +93,70 @@
 		</nav>
 
 		<!-- Hero Section -->
-		<section class="relative z-10 min-h-screen flex items-center justify-center pt-32 pb-20 px-6">
-			<div class="max-w-5xl mx-auto text-center space-y-10">
+		<section class="relative z-10 min-h-screen flex items-center justify-center pt-36 pb-20 px-6">
+			<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
 				
-				<!-- Telemetry Pill -->
-				<div class="inline-flex items-center gap-3 px-4 py-1.5 rounded-full titanium-glass text-[11px] font-mono-tech text-zinc-300 border border-white/10">
-					<span class="flex items-center gap-2">
-						<span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-						<span class="text-white">ATLANTA // GA</span>
-					</span>
-					<span class="text-zinc-600">|</span>
-					<span>GT BME '13</span>
-					<span class="text-zinc-600">|</span>
-					<span>TOP 40 LAA INVENTOR</span>
+				<!-- Left Text Column -->
+				<div class="lg:col-span-7 space-y-8 text-center lg:text-left">
+					<div class="inline-flex items-center gap-3 px-4 py-1.5 rounded-full titanium-glass text-[11px] font-mono-tech text-zinc-300 border border-white/10">
+						<span class="flex items-center gap-2">
+							<span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+							<span class="text-white">ATLANTA // GA</span>
+						</span>
+						<span class="text-zinc-600">|</span>
+						<span>GT BME '13</span>
+						<span class="text-zinc-600">|</span>
+						<span>TOP 40 LAA INVENTOR</span>
+					</div>
+
+					<h1 class="text-5xl sm:text-7xl lg:text-8xl font-light tracking-tight leading-[0.92] text-white">
+						Synthesizing <br>
+						<span class="font-serif-editorial italic font-normal text-[#E5E2DC] opacity-90">
+							Medical Precision & Physical Craft.
+						</span>
+					</h1>
+
+					<p class="max-w-xl text-zinc-400 text-base sm:text-lg font-light leading-relaxed tracking-wide">
+						GT Biomedical Engineer, patented medical device inventor, and creative director bridging cardiovascular innovation with luxury architectural apparel and venture systems.
+					</p>
+
+					<div class="pt-2 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center font-mono-tech text-xs">
+						<a href="#exhibition" class="w-full sm:w-auto px-8 py-4 rounded-full bg-[#E5E2DC] text-black font-semibold tracking-[0.15em] uppercase hover:bg-white transition-all flex items-center justify-center gap-3 shadow-2xl">
+							EXPLORE PORTFOLIO MATRIX
+							<span>↓</span>
+						</a>
+						<a href="#lookbook" class="w-full sm:w-auto px-8 py-4 rounded-full titanium-glass text-zinc-300 font-medium tracking-[0.15em] uppercase hover:text-white transition-all flex items-center justify-center gap-2">
+							STUDIO GALLERY
+						</a>
+					</div>
 				</div>
 
-				<!-- Display Headline -->
-				<h1 class="text-5xl sm:text-7xl lg:text-9xl font-light tracking-tight leading-[0.92] text-white">
-					From Sketches <br>
-					<span class="font-serif-editorial italic font-normal text-[#E5E2DC] opacity-90">
-						to Systemic Solutions.
-					</span>
-				</h1>
-
-				<p class="max-w-2xl mx-auto text-zinc-400 text-base sm:text-lg font-light leading-relaxed tracking-wide">
-					Georgia Tech Biomedical Engineer, patented cardiovascular device inventor, and multi-industry founder operating across MedTech, healthcare strategy, architectural apparel, and venture networks.
-				</p>
-
-				<div class="pt-4 flex flex-col sm:flex-row gap-4 justify-center items-center font-mono-tech text-xs">
-					<a href="#exhibition" class="w-full sm:w-auto px-8 py-4 rounded-full bg-[#E5E2DC] text-black font-semibold tracking-[0.15em] uppercase hover:bg-white transition-all flex items-center justify-center gap-3 shadow-2xl">
-						Explore Portfolio
-						<span>↓</span>
-					</a>
-					<a href="#forecasts" class="w-full sm:w-auto px-8 py-4 rounded-full titanium-glass text-zinc-300 font-medium tracking-[0.15em] uppercase hover:text-white transition-all flex items-center justify-center gap-2">
-						Read Forecasts
-					</a>
+				<!-- Right Editorial Image Anchor Frame -->
+				<div class="lg:col-span-5 relative group">
+					<div class="titanium-glass rounded-3xl p-3 border border-white/10 relative overflow-hidden shadow-2xl">
+						<div class="relative h-[480px] sm:h-[560px] rounded-2xl overflow-hidden bg-zinc-900">
+							<img 
+								src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=1200&q=80" 
+								alt="Arnab Chakraborty Studio Frame" 
+								class="w-full h-full object-cover img-grayscale-hover"
+							/>
+							<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+							
+							<div class="absolute bottom-6 left-6 right-6 font-mono-tech text-xs flex justify-between items-end text-zinc-300">
+								<div>
+									<p class="text-white font-semibold uppercase tracking-widest">FIGURE 01 // FOUNDER PORTRAIT</p>
+									<p class="text-[10px] text-zinc-400 mt-1">ATLANTA STUDIO CANVAS</p>
+								</div>
+								<span class="text-[10px] px-2.5 py-1 rounded bg-black/60 border border-white/20">2026</span>
+							</div>
+						</div>
+					</div>
 				</div>
+
 			</div>
 		</section>
 
-		<!-- Archival Ticker -->
+		<!-- Archival Marquee Ticker -->
 		<div class="relative z-10 py-5 border-y border-white/10 bg-black/60 backdrop-blur-md overflow-hidden">
 			<div class="animate-marquee whitespace-nowrap flex items-center gap-12 font-mono-tech text-[11px] tracking-[0.25em] text-zinc-500 uppercase">
 				<span>FLOW MEDTECH // CARDIOVASCULAR IMPLANTS</span>
@@ -141,12 +171,10 @@
 				<span class="text-[#E5E2DC]">✦</span>
 				<span>GEORGIA TECH 40 UNDER 40</span>
 				<span class="text-[#E5E2DC]">✦</span>
-				<span>DELOITTE CORTEX // ENTERPRISE SYSTEMS</span>
-				<span class="text-[#E5E2DC]">✦</span>
 			</div>
 		</div>
 
-		<!-- Personal Narrative / Manifesto Section -->
+		<!-- Personal Narrative Section -->
 		<section id="manifesto" class="relative z-10 py-32 px-6">
 			<div class="max-w-6xl mx-auto titanium-glass rounded-3xl p-8 sm:p-16 relative overflow-hidden">
 				<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
@@ -161,57 +189,79 @@
 							My journey into innovation wasn't sparked solely in a lab—it began with a skateboard, creative friends, and a desire to build solutions from scratch. With roots stretching from India to Oklahoma, Northeast Tennessee, and Atlanta, Georgia, my path led to Biomedical Engineering at Georgia Tech.
 						</p>
 						<p>
-							That foundation led to co-founding <strong class="text-white font-normal">Flow MedTech</strong>, where I developed polymer heart implants for stroke prevention in AFib patients, earning patents and recognition as a Top 40 LAA inventor. Today, I translate that technical precision into physical culture with <strong class="text-white font-normal">Awoken Matter</strong> under design house <em>Atehliye</em>, while directing healthcare product strategy at <strong class="text-white font-normal">River Health</strong>, building startup ecosystems at <strong class="text-white font-normal">Founders Forge</strong>, and advising emerging ventures.
+							That foundation led to co-founding <strong class="text-white font-normal">Flow MedTech</strong>, developing polymer heart implants for stroke prevention in AFib patients, earning patents and recognition as a Top 40 LAA inventor. Today, I translate that technical precision into physical culture with <strong class="text-white font-normal">Awoken Matter</strong> under design house <em>Atehliye</em>, while directing healthcare product strategy at <strong class="text-white font-normal">River Health</strong>, building startup ecosystems at <strong class="text-white font-normal">Founders Forge</strong>, and advising emerging ventures.
 						</p>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<!-- Portfolio Exhibition Bento Grid -->
+		<!-- Visual Portfolio Exhibition Matrix (With Images) -->
 		<section id="exhibition" class="relative z-10 py-24 px-6">
 			<div class="max-w-6xl mx-auto space-y-12">
 				<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-white/10 pb-8">
 					<div>
 						<span class="font-mono-tech text-xs text-zinc-400 tracking-[0.25em] uppercase">// 02. VENTURE MATRIX</span>
-						<h2 class="text-4xl sm:text-6xl font-light mt-2 text-white font-serif-editorial">The Portfolio</h2>
+						<h2 class="text-4xl sm:text-6xl font-light mt-2 text-white font-serif-editorial">Selected Initiatives</h2>
 					</div>
 					<p class="text-zinc-400 text-xs font-mono-tech tracking-widest uppercase">
-						MEDTECH • HEALTHCARE • APPAREL • ECOSYSTEMS
+						VISUAL EXHIBITION & CASE ARCHIVES
 					</p>
 				</div>
 
-				<!-- Bento Grid -->
+				<!-- Bento Grid with Photos -->
 				<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
 					
 					<!-- Card 1: Flow MedTech (8 cols) -->
-					<div class="md:col-span-8 titanium-glass rounded-3xl p-8 sm:p-12 flex flex-col justify-between space-y-8 group">
-						<div class="space-y-4">
-							<div class="flex justify-between items-start">
-								<span class="font-mono-tech text-xs text-zinc-400 tracking-widest uppercase">CATALOG 001 // STRUCTURAL HEART IMPLANTS</span>
-								<span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-white text-[10px] font-mono-tech">Co-Founder & CTO</span>
+					<div class="md:col-span-8 titanium-glass rounded-3xl p-8 sm:p-10 flex flex-col justify-between space-y-8 group">
+						<div class="space-y-6">
+							<!-- Image Frame -->
+							<div class="relative h-64 sm:h-80 rounded-2xl overflow-hidden bg-black/60 border border-white/10">
+								<img 
+									src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=80" 
+									alt="Flow MedTech Biomedical Engineering" 
+									class="w-full h-full object-cover img-grayscale-hover"
+								/>
+								<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+								<span class="absolute top-4 left-4 font-mono-tech text-[10px] px-3 py-1 rounded-full bg-black/60 border border-white/20 text-white">
+									STRUCTURAL HEART R&D
+								</span>
 							</div>
-							<h3 class="text-3xl sm:text-4xl font-light text-white font-serif-editorial group-hover:text-zinc-200 transition-colors">Flow MedTech</h3>
-							<p class="text-zinc-300 text-base leading-relaxed font-light max-w-xl">
-								Co-founded and led R&D for polymer-based Left Atrial Appendage (LAA) occlusion heart implants to eliminate stroke risk in AFib patients without long-term blood thinners. Conducted clinical research across 100+ clinicians. Supported by Cleveland Clinic GCIC and Health Wildcatters.
-							</p>
+
+							<div class="space-y-3">
+								<div class="flex justify-between items-start">
+									<span class="font-mono-tech text-xs text-zinc-400 tracking-widest uppercase">CATALOG 001 // MEDTECH IMPLANTS</span>
+									<span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-white text-[10px] font-mono-tech">Co-Founder & CTO</span>
+								</div>
+								<h3 class="text-3xl font-light text-white font-serif-editorial group-hover:text-zinc-200 transition-colors">Flow MedTech</h3>
+								<p class="text-zinc-300 text-sm sm:text-base leading-relaxed font-light">
+									Co-founded and led R&D for polymer-based Left Atrial Appendage (LAA) occlusion heart implants to eliminate stroke risk in AFib patients without long-term blood thinners. Conducted clinical research across 100+ clinicians. Supported by Cleveland Clinic GCIC and Health Wildcatters.
+								</p>
+							</div>
 						</div>
 
 						<div class="pt-6 border-t border-white/10 flex flex-wrap items-center justify-between gap-4 font-mono-tech text-xs text-zinc-400">
-							<span>TOP 40 LAA INVENTOR • MULTIPLE PATENTS</span>
-							<span class="text-white group-hover:translate-x-1 transition-transform">Explore MedTech →</span>
+							<span>TOP 40 LAA INVENTOR • PATENTS HELD</span>
+							<span class="text-white group-hover:translate-x-1 transition-transform">EXPLORE MEDTECH →</span>
 						</div>
 					</div>
 
 					<!-- Card 2: 2x 40 Under 40 Distinction (4 cols) -->
 					<div class="md:col-span-4 titanium-glass rounded-3xl p-8 flex flex-col justify-between space-y-6 bg-gradient-to-br from-white/[0.03] to-black/90">
-						<div class="space-y-3">
+						<div class="space-y-4">
+							<div class="relative h-48 rounded-2xl overflow-hidden bg-black/60 border border-white/10">
+								<img 
+									src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80" 
+									alt="Georgia Tech Honor" 
+									class="w-full h-full object-cover img-grayscale-hover"
+								/>
+							</div>
 							<span class="font-mono-tech text-xs text-amber-300 tracking-widest uppercase">HONOR & ACCOLADE</span>
 							<h4 class="text-3xl font-light text-white font-serif-editorial">2x 40 Under 40 Honoree</h4>
+							<p class="text-zinc-400 text-xs leading-relaxed font-light">
+								Awarded by Georgia Tech (2020) and Tri-Cities Business Journal (2021) for inventing cardiovascular stroke-prevention devices and leading multi-industry ventures.
+							</p>
 						</div>
-						<p class="text-zinc-400 text-xs leading-relaxed font-light">
-							Awarded by Georgia Tech (2020) and Tri-Cities Business Journal (2021) for inventing cardiovascular stroke-prevention devices and leading multi-industry ventures.
-						</p>
 						<div class="pt-4 border-t border-white/10 font-mono-tech text-[10px] text-amber-200 uppercase tracking-widest">
 							GEORGIA TECH & TRI-CITIES
 						</div>
@@ -219,73 +269,119 @@
 
 					<!-- Card 3: Awoken Matter (6 cols) -->
 					<div class="md:col-span-6 titanium-glass rounded-3xl p-8 flex flex-col justify-between space-y-8 group">
-						<div class="space-y-4">
-							<div class="flex justify-between items-start">
-								<span class="font-mono-tech text-xs text-zinc-400 tracking-widest uppercase">CATALOG 002 // ARCHITECTURAL APPAREL</span>
-								<span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-white text-[10px] font-mono-tech">Co-Founder</span>
+						<div class="space-y-6">
+							<div class="relative h-64 rounded-2xl overflow-hidden bg-black/60 border border-white/10">
+								<img 
+									src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1000&q=80" 
+									alt="Awoken Matter Architectural Apparel" 
+									class="w-full h-full object-cover img-grayscale-hover"
+								/>
+								<span class="absolute top-4 left-4 font-mono-tech text-[10px] px-3 py-1 rounded-full bg-black/60 border border-white/20 text-white">
+									ARCHITECTURAL APPAREL
+								</span>
 							</div>
-							<h3 class="text-3xl font-light text-white font-serif-editorial group-hover:text-zinc-200 transition-colors">Awoken Matter</h3>
-							<p class="text-zinc-400 text-sm leading-relaxed font-light">
-								Luxury architectural streetwear and physical design studio under design house <em>Atehliye</em>. Fusing 450GSM heavyweight fabrications, Renaissance canvas overlays, and structural rigor to treat clothing as personal armor.
-							</p>
+
+							<div class="space-y-3">
+								<div class="flex justify-between items-start">
+									<span class="font-mono-tech text-xs text-zinc-400 tracking-widest uppercase">CATALOG 002 // PHYSICAL DESIGN</span>
+									<span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-white text-[10px] font-mono-tech">Co-Founder</span>
+								</div>
+								<h3 class="text-3xl font-light text-white font-serif-editorial group-hover:text-zinc-200 transition-colors">Awoken Matter</h3>
+								<p class="text-zinc-400 text-sm leading-relaxed font-light">
+									Luxury architectural streetwear and physical design studio under design house <em>Atehliye</em>. Fusing 450GSM heavyweight fabrications, Renaissance canvas overlays, and structural rigor to treat clothing as personal armor.
+								</p>
+							</div>
 						</div>
 						<div class="pt-6 border-t border-white/10 flex justify-between items-center font-mono-tech text-xs text-zinc-400">
 							<span>ATEHLIYE DESIGN HOUSE</span>
-							<span class="text-white group-hover:translate-x-1 transition-transform">Explore Studio →</span>
+							<span class="text-white group-hover:translate-x-1 transition-transform">EXPLORE STUDIO →</span>
 						</div>
 					</div>
 
 					<!-- Card 4: River Health (6 cols) -->
 					<div class="md:col-span-6 titanium-glass rounded-3xl p-8 flex flex-col justify-between space-y-8 group">
-						<div class="space-y-4">
-							<div class="flex justify-between items-start">
-								<span class="font-mono-tech text-xs text-emerald-400 tracking-widest uppercase">CATALOG 003 // HEALTHCARE STRATEGY</span>
-								<span class="px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-300 text-[10px] font-mono-tech">Product | Strategy</span>
+						<div class="space-y-6">
+							<div class="relative h-64 rounded-2xl overflow-hidden bg-black/60 border border-white/10">
+								<img 
+									src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=1000&q=80" 
+									alt="River Health Strategy" 
+									class="w-full h-full object-cover img-grayscale-hover"
+								/>
+								<span class="absolute top-4 left-4 font-mono-tech text-[10px] px-3 py-1 rounded-full bg-black/60 border border-white/20 text-white">
+									HEALTHCARE STRATEGY
+								</span>
 							</div>
-							<h3 class="text-3xl font-light text-white font-serif-editorial group-hover:text-emerald-200 transition-colors">River Health</h3>
-							<p class="text-zinc-400 text-sm leading-relaxed font-light">
-								Directing the end-to-end product development lifecycle from conception to launch. Driving data-informed decision-making, key metric optimization, customer research, and cross-functional product roadmaps.
-							</p>
+
+							<div class="space-y-3">
+								<div class="flex justify-between items-start">
+									<span class="font-mono-tech text-xs text-emerald-400 tracking-widest uppercase">CATALOG 003 // HEALTHCARE STRATEGY</span>
+									<span class="px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-300 text-[10px] font-mono-tech">Product | Strategy</span>
+								</div>
+								<h3 class="text-3xl font-light text-white font-serif-editorial group-hover:text-emerald-200 transition-colors">River Health</h3>
+								<p class="text-zinc-400 text-sm leading-relaxed font-light">
+									Directing the end-to-end product development lifecycle from strategy to launch. Driving data-informed decision-making, key metric optimization, customer research, and cross-functional product roadmaps.
+								</p>
+							</div>
 						</div>
 						<div class="pt-6 border-t border-white/10 flex justify-between items-center font-mono-tech text-xs text-zinc-400">
 							<span>HEALTHCARE INNOVATION</span>
-							<span class="text-emerald-300 group-hover:translate-x-1 transition-transform">Product Strategy →</span>
+							<span class="text-emerald-300 group-hover:translate-x-1 transition-transform">PRODUCT STRATEGY →</span>
 						</div>
 					</div>
 
 					<!-- Card 5: FoundersForge (6 cols) -->
 					<div class="md:col-span-6 titanium-glass rounded-3xl p-8 flex flex-col justify-between space-y-8 group">
-						<div class="space-y-4">
-							<div class="flex justify-between items-start">
-								<span class="font-mono-tech text-xs text-purple-400 tracking-widest uppercase">CATALOG 004 // VENTURE ECOSYSTEMS</span>
-								<span class="px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-300 text-[10px] font-mono-tech">Co-Founder & Ambassador</span>
+						<div class="space-y-6">
+							<div class="relative h-56 rounded-2xl overflow-hidden bg-black/60 border border-white/10">
+								<img 
+									src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1000&q=80" 
+									alt="FoundersForge Accelerator" 
+									class="w-full h-full object-cover img-grayscale-hover"
+								/>
 							</div>
-							<h3 class="text-3xl font-light text-white font-serif-editorial group-hover:text-purple-200 transition-colors">FoundersForge</h3>
-							<p class="text-zinc-400 text-sm leading-relaxed font-light">
-								Co-founded in Johnson City, TN, building a vibrant startup ecosystem connecting 26+ ventures and 45+ mentors. Spearheaded pitch competitions, roundtables, and capital-readiness infrastructure.
-							</p>
+
+							<div class="space-y-3">
+								<div class="flex justify-between items-start">
+									<span class="font-mono-tech text-xs text-purple-400 tracking-widest uppercase">CATALOG 004 // VENTURE ECOSYSTEMS</span>
+									<span class="px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-300 text-[10px] font-mono-tech">Co-Founder</span>
+								</div>
+								<h3 class="text-3xl font-light text-white font-serif-editorial group-hover:text-purple-200 transition-colors">FoundersForge</h3>
+								<p class="text-zinc-400 text-sm leading-relaxed font-light">
+									Co-founded in Johnson City, TN, building a vibrant startup ecosystem connecting 26+ ventures and 45+ mentors. Spearheaded pitch competitions, roundtables, and capital-readiness infrastructure.
+								</p>
+							</div>
 						</div>
 						<div class="pt-6 border-t border-white/10 flex justify-between items-center font-mono-tech text-xs text-zinc-400">
 							<span>26+ STARTUPS • 45+ MENTORS</span>
-							<span class="text-purple-300 group-hover:translate-x-1 transition-transform">Ecosystem Impact →</span>
+							<span class="text-purple-300 group-hover:translate-x-1 transition-transform">ECOSYSTEM IMPACT →</span>
 						</div>
 					</div>
 
 					<!-- Card 6: SimKare VR + AI (6 cols) -->
 					<div class="md:col-span-6 titanium-glass rounded-3xl p-8 flex flex-col justify-between space-y-8 group">
-						<div class="space-y-4">
-							<div class="flex justify-between items-start">
-								<span class="font-mono-tech text-xs text-blue-400 tracking-widest uppercase">CATALOG 005 // SPATIAL TECH & AI</span>
-								<span class="px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-300 text-[10px] font-mono-tech">Co-Founder</span>
+						<div class="space-y-6">
+							<div class="relative h-56 rounded-2xl overflow-hidden bg-black/60 border border-white/10">
+								<img 
+									src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?auto=format&fit=crop&w=1000&q=80" 
+									alt="SimKare VR Spatial Tech" 
+									class="w-full h-full object-cover img-grayscale-hover"
+								/>
 							</div>
-							<h3 class="text-3xl font-light text-white font-serif-editorial group-hover:text-blue-200 transition-colors">SimKare</h3>
-							<p class="text-zinc-400 text-sm leading-relaxed font-light">
-								Managed product lifecycle and strategic partnerships for VR + AI integrated educational technologies, opening new learning pathways for students with special needs and vocational skill development.
-							</p>
+
+							<div class="space-y-3">
+								<div class="flex justify-between items-start">
+									<span class="font-mono-tech text-xs text-blue-400 tracking-widest uppercase">CATALOG 005 // SPATIAL TECH & AI</span>
+									<span class="px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-300 text-[10px] font-mono-tech">Co-Founder</span>
+								</div>
+								<h3 class="text-3xl font-light text-white font-serif-editorial group-hover:text-blue-200 transition-colors">SimKare</h3>
+								<p class="text-zinc-400 text-sm leading-relaxed font-light">
+									Managed product lifecycle and strategic partnerships for VR + AI integrated educational technologies, opening new learning pathways for students with special needs and vocational skill development.
+								</p>
+							</div>
 						</div>
 						<div class="pt-6 border-t border-white/10 flex justify-between items-center font-mono-tech text-xs text-zinc-400">
 							<span>SPECIAL NEEDS EDTECH</span>
-							<span class="text-blue-300 group-hover:translate-x-1 transition-transform">EdTech Systems →</span>
+							<span class="text-blue-300 group-hover:translate-x-1 transition-transform">EDTECH SYSTEMS →</span>
 						</div>
 					</div>
 
@@ -293,11 +389,61 @@
 			</div>
 		</section>
 
-		<!-- Trend Forecasting Section -->
+		<!-- Visual Studio Gallery / Lookbook Strip -->
+		<section id="lookbook" class="relative z-10 py-24 px-6 bg-black/80 border-y border-white/10">
+			<div class="max-w-6xl mx-auto space-y-12">
+				<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+					<div>
+						<span class="font-mono-tech text-xs text-zinc-400 tracking-[0.25em] uppercase">// INDEX 03. STUDIO GALLERY</span>
+						<h2 class="text-4xl sm:text-5xl font-light text-white font-serif-editorial mt-2">Editorial Artifacts</h2>
+					</div>
+					<p class="text-zinc-400 text-xs font-mono-tech tracking-widest uppercase">
+						PHYSICAL CRAFT • STUDIO SHOOTS • ART & CULTURE
+					</p>
+				</div>
+
+				<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+					<!-- Gallery Asset 1 -->
+					<div class="titanium-glass rounded-2xl overflow-hidden p-3 group">
+						<div class="relative h-80 rounded-xl overflow-hidden">
+							<img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=800&q=80" alt="Awoken Matter Lookbook 1" class="w-full h-full object-cover img-grayscale-hover" />
+						</div>
+						<div class="p-4 font-mono-tech text-xs flex justify-between items-center text-zinc-400">
+							<span>AWOKEN MATTER // FIGURE 01</span>
+							<span class="text-white">450GSM COTTON</span>
+						</div>
+					</div>
+
+					<!-- Gallery Asset 2 -->
+					<div class="titanium-glass rounded-2xl overflow-hidden p-3 group">
+						<div class="relative h-80 rounded-xl overflow-hidden">
+							<img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=800&q=80" alt="Biomedical Device Lab" class="w-full h-full object-cover img-grayscale-hover" />
+						</div>
+						<div class="p-4 font-mono-tech text-xs flex justify-between items-center text-zinc-400">
+							<span>FLOW MEDTECH // FIGURE 02</span>
+							<span class="text-white">LAA IMPLANT</span>
+						</div>
+					</div>
+
+					<!-- Gallery Asset 3 -->
+					<div class="titanium-glass rounded-2xl overflow-hidden p-3 group">
+						<div class="relative h-80 rounded-xl overflow-hidden">
+							<img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=800&q=80" alt="Global Perspective Travel" class="w-full h-full object-cover img-grayscale-hover" />
+						</div>
+						<div class="p-4 font-mono-tech text-xs flex justify-between items-center text-zinc-400">
+							<span>GLOBAL CULTURE // FIGURE 03</span>
+							<span class="text-white">20+ COUNTRIES</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Forecasts Section -->
 		<section id="forecasts" class="relative z-10 py-24 px-6">
 			<div class="max-w-5xl mx-auto space-y-12">
 				<div class="space-y-2 border-b border-white/10 pb-6">
-					<span class="font-mono-tech text-xs text-zinc-400 tracking-[0.25em] uppercase">// 03. FORESIGHT & PERSPECTIVES</span>
+					<span class="font-mono-tech text-xs text-zinc-400 tracking-[0.25em] uppercase">// INDEX 04. FORESIGHT & ESSAYS</span>
 					<h2 class="text-4xl sm:text-5xl font-light text-white font-serif-editorial">The Trend Outlook</h2>
 				</div>
 
@@ -341,7 +487,7 @@
 								<span>•</span>
 								<span>6 MIN READ</span>
 							</div>
-							<h3 class="text-2xl font-mono-tech text-xs text-white flex items-center gap-2 group-hover:translate-x-2 transition-transform">
+							<h3 class="text-2xl font-light text-white font-serif-editorial group-hover:text-amber-200 transition-colors">
 								Capital Readiness Beyond Major Hubs: Lessons from Scaling 26+ Regional Startups
 							</h3>
 						</div>
@@ -353,42 +499,7 @@
 			</div>
 		</section>
 
-		<!-- Passions, Culture & Enterprise -->
-		<section id="culture" class="relative z-10 py-24 px-6">
-			<div class="max-w-6xl mx-auto titanium-glass rounded-3xl p-8 sm:p-16 space-y-12">
-				<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-					<div class="space-y-6">
-						<span class="font-mono-tech text-xs text-zinc-400 tracking-[0.25em] uppercase">// 04. CULTURE & PASSIONS</span>
-						<h2 class="text-3xl sm:text-5xl font-light leading-tight text-white font-serif-editorial">
-							Driven by global perspective & creative expression.
-						</h2>
-						<p class="text-zinc-400 text-sm font-light leading-relaxed">
-							Explored 20+ countries and 25+ states, drawing creative inspiration from fine art, automotive design, and diverse cultural landscapes. Formerly Product Delivery Lead for Deloitte Cortex, driving audit software transformation with a 94% improvement in vendor response times.
-						</p>
-					</div>
-					<div class="grid grid-cols-2 gap-6 font-mono-tech">
-						<div class="bg-black/50 border border-white/5 p-6 rounded-2xl text-center space-y-2">
-							<p class="text-2xl sm:text-3xl font-bold text-white">20+ / 25+</p>
-							<p class="text-[10px] text-zinc-500 uppercase tracking-wider">Countries & States Explored</p>
-						</div>
-						<div class="bg-black/50 border border-white/5 p-6 rounded-2xl text-center space-y-2">
-							<p class="text-2xl sm:text-3xl font-bold text-white">94%</p>
-							<p class="text-[10px] text-zinc-500 uppercase tracking-wider">Response Improvement (Deloitte)</p>
-						</div>
-						<div class="bg-black/50 border border-white/5 p-6 rounded-2xl text-center space-y-2">
-							<p class="text-2xl sm:text-3xl font-bold text-white">GT BME</p>
-							<p class="text-[10px] text-zinc-500 uppercase tracking-wider">Class of 2013</p>
-						</div>
-						<div class="bg-black/50 border border-white/5 p-6 rounded-2xl text-center space-y-2">
-							<p class="text-2xl sm:text-3xl font-bold text-white">26+</p>
-							<p class="text-[10px] text-zinc-500 uppercase tracking-wider">Startups Mentored</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!-- Footer / Direct Engagement -->
+		<!-- Footer -->
 		<footer id="contact" class="relative z-10 py-24 px-6 border-t border-white/10 bg-black/90">
 			<div class="max-w-6xl mx-auto flex flex-col lg:flex-row justify-between items-start lg:items-center gap-12">
 				<div class="space-y-4 max-w-xl">
