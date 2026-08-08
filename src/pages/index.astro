@@ -1,0 +1,193 @@
+---
+// Astro Page Component
+---
+
+<html lang="en" class="scroll-smooth">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Arnab Sarkar — Founder & Innovator</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	</head>
+	<body class="bg-[#0B0C10] text-[#F4F4F5] font-['Plus_Jakarta_Sans'] antialiased selection:bg-indigo-500 selection:text-white overflow-x-hidden">
+
+		<!-- Background Glow Effect -->
+		<div class="fixed inset-0 pointer-events-none z-0">
+			<div class="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] rounded-full bg-indigo-900/20 blur-[120px]"></div>
+			<div class="absolute bottom-[-10%] right-[-10%] w-[600px] h-[600px] rounded-full bg-cyan-900/15 blur-[150px]"></div>
+		</div>
+
+		<!-- Navigation -->
+		<nav class="fixed top-0 left-0 w-full z-50 px-6 py-4">
+			<div class="max-w-6xl mx-auto bg-[#12141D]/60 backdrop-blur-md border border-white/10 rounded-full px-6 py-3 flex items-center justify-between">
+				<a href="#" class="font-semibold text-lg tracking-tight hover:opacity-80 transition">
+					ARNAB<span class="text-indigo-400">.SARKAR</span>
+				</a>
+				<div class="hidden md:flex items-center gap-8 text-sm text-zinc-400">
+					<a href="#about" class="hover:text-white transition">About</a>
+					<a href="#ventures" class="hover:text-white transition">Ventures</a>
+					<a href="#outlook" class="hover:text-white transition">Outlook</a>
+					<a href="#impact" class="hover:text-white transition">Impact</a>
+				</div>
+				<a href="#contact" class="px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 text-white text-sm font-medium transition border border-white/10">
+					Connect
+				</a>
+			</div>
+		</nav>
+
+		<!-- Hero Section -->
+		<section class="relative z-10 min-h-screen flex items-center justify-center pt-24 px-6">
+			<div class="max-w-4xl mx-auto text-center space-y-8">
+				<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#12141D]/80 border border-white/10 text-xs font-medium text-indigo-300">
+					<span class="w-2 h-2 rounded-full bg-indigo-400 animate-pulse"></span>
+					Cross-Disciplinary Entrepreneur & Biomedical Engineer
+				</div>
+				<h1 class="text-4xl sm:text-6xl md:text-7xl font-light tracking-tight leading-[1.1]">
+					Engineering at the intersection of <br>
+					<span class="font-['Playfair_Display'] italic bg-gradient-to-r from-white via-indigo-200 to-indigo-500 bg-clip-text text-transparent">Health, Fashion & Ecosystems.</span>
+				</h1>
+				<p class="max-w-2xl mx-auto text-zinc-400 text-base sm:text-lg font-light leading-relaxed">
+					Serial founder forecasting trends and engineering high-impact physical and digital solutions across MedTech, smart textiles, and venture acceleration.
+				</p>
+				<div class="pt-4 flex flex-col sm:flex-row gap-4 justify-center items-center">
+					<a href="#ventures" class="w-full sm:w-auto px-8 py-4 rounded-full bg-white text-black font-semibold text-sm hover:bg-zinc-200 transition shadow-lg shadow-white/10">
+						Explore Ventures →
+					</a>
+					<a href="#outlook" class="w-full sm:w-auto px-8 py-4 rounded-full bg-white/5 border border-white/10 text-zinc-300 font-medium text-sm hover:text-white hover:bg-white/10 transition">
+						Read Trend Outlook
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- Venture Matrix -->
+		<section id="ventures" class="relative z-10 py-32 px-6">
+			<div class="max-w-6xl mx-auto space-y-16">
+				<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+					<div>
+						<p class="text-xs font-semibold tracking-widest text-indigo-400 uppercase">Portfolio Matrix</p>
+						<h2 class="text-3xl sm:text-4xl font-light mt-2">Built at the Edge of Innovation</h2>
+					</div>
+					<p class="text-zinc-400 text-sm max-w-md">
+						Targeted ventures delivering systemic solutions across healthcare systems, smart apparel, and entrepreneurship education.
+					</p>
+				</div>
+
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+					<!-- Card 1 -->
+					<div class="bg-[#12141D]/60 border border-white/10 p-8 rounded-3xl space-y-6 hover:border-white/20 transition-all group">
+						<div class="flex justify-between items-start">
+							<div class="w-10 h-10 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 font-semibold text-sm">01</div>
+							<span class="text-xs px-2.5 py-1 rounded-full bg-white/5 border border-white/10 text-zinc-400">Healthcare</span>
+						</div>
+						<h3 class="text-2xl font-semibold group-hover:text-indigo-300 transition">Flow MedTech</h3>
+						<p class="text-zinc-400 text-sm leading-relaxed">
+							Developing precision biomedical engineering solutions designed to elevate clinical workflows and patient care metrics.
+						</p>
+						<div class="pt-6 border-t border-white/5 text-xs text-zinc-500">Biomedical Innovation</div>
+					</div>
+
+					<!-- Card 2 -->
+					<div class="bg-[#12141D]/60 border border-white/10 p-8 rounded-3xl space-y-6 hover:border-white/20 transition-all group">
+						<div class="flex justify-between items-start">
+							<div class="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 font-semibold text-sm">02</div>
+							<span class="text-xs px-2.5 py-1 rounded-full bg-white/5 border border-white/10 text-zinc-400">Fashion Tech</span>
+						</div>
+						<h3 class="text-2xl font-semibold group-hover:text-cyan-300 transition">Awoken Matter</h3>
+						<p class="text-zinc-400 text-sm leading-relaxed">
+							Fusing contemporary design systems with smart textiles to redefine modern apparel through functional aesthetics.
+						</p>
+						<div class="pt-6 border-t border-white/5 text-xs text-zinc-500">Smart Apparel & Textiles</div>
+					</div>
+
+					<!-- Card 3 -->
+					<div class="bg-[#12141D]/60 border border-white/10 p-8 rounded-3xl space-y-6 hover:border-white/20 transition-all group">
+						<div class="flex justify-between items-start">
+							<div class="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 font-semibold text-sm">03</div>
+							<span class="text-xs px-2.5 py-1 rounded-full bg-white/5 border border-white/10 text-zinc-400">EdTech</span>
+						</div>
+						<h3 class="text-2xl font-semibold group-hover:text-purple-300 transition">FoundersForge</h3>
+						<p class="text-zinc-400 text-sm leading-relaxed">
+							Empowering next-generation founders through educational infrastructure, tactical mentorship, and scaling support.
+						</p>
+						<div class="pt-6 border-t border-white/5 text-xs text-zinc-500">Venture Acceleration</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Trend Forecasting Section -->
+		<section id="outlook" class="relative z-10 py-24 px-6 bg-white/[0.01]">
+			<div class="max-w-4xl mx-auto space-y-12">
+				<div class="space-y-3">
+					<p class="text-xs font-semibold tracking-widest text-indigo-400 uppercase">The Outlook</p>
+					<h2 class="text-3xl sm:text-4xl font-light">Cross-Disciplinary Perspectives</h2>
+				</div>
+
+				<div class="space-y-6">
+					<article class="bg-[#12141D]/60 border border-white/10 p-6 sm:p-8 rounded-2xl flex justify-between items-center hover:border-indigo-500/40 transition">
+						<div class="space-y-2">
+							<div class="flex items-center gap-3 text-xs text-zinc-500">
+								<span>MedTech & Sensing</span> • <span>4 min read</span>
+							</div>
+							<h3 class="text-lg font-semibold hover:text-indigo-300 transition">The Convergence of Wearable Medical Sensors and Daily Apparel</h3>
+						</div>
+						<span class="text-zinc-500 text-xl">→</span>
+					</article>
+
+					<article class="bg-[#12141D]/60 border border-white/10 p-6 sm:p-8 rounded-2xl flex justify-between items-center hover:border-indigo-500/40 transition">
+						<div class="space-y-2">
+							<div class="flex items-center gap-3 text-xs text-zinc-500">
+								<span>Ecosystem Building</span> • <span>6 min read</span>
+							</div>
+							<h3 class="text-lg font-semibold hover:text-indigo-300 transition">Why Regional Founder Infrastructure Outpaces Legacy Accelerator Models</h3>
+						</div>
+						<span class="text-zinc-500 text-xl">→</span>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<!-- Recognition -->
+		<section id="impact" class="relative z-10 py-32 px-6">
+			<div class="max-w-6xl mx-auto bg-[#12141D]/60 border border-white/10 rounded-3xl p-8 sm:p-16">
+				<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+					<div class="space-y-6">
+						<span class="px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 text-xs font-medium">Recognition</span>
+						<h2 class="text-3xl sm:text-4xl font-light leading-tight">Georgia Tech 40 Under 40 Honoree</h2>
+						<p class="text-zinc-400 text-sm leading-relaxed">
+							Recognized for transformative entrepreneurship, cross-industry execution, and driving growth initiatives across technological and physical product domains.
+						</p>
+					</div>
+					<div class="grid grid-cols-2 gap-6">
+						<div class="bg-black/30 border border-white/5 p-6 rounded-2xl text-center space-y-2">
+							<p class="text-3xl sm:text-4xl font-bold text-white">5+</p>
+							<p class="text-xs text-zinc-500 uppercase tracking-wider">Industries Scaled</p>
+						</div>
+						<div class="bg-black/30 border border-white/5 p-6 rounded-2xl text-center space-y-2">
+							<p class="text-3xl sm:text-4xl font-bold text-white">3</p>
+							<p class="text-xs text-zinc-500 uppercase tracking-wider">Core Ventures</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer id="contact" class="relative z-10 py-20 px-6 border-t border-white/5">
+			<div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+				<div>
+					<h3 class="text-2xl font-light">Let's build what's next.</h3>
+					<p class="text-xs text-zinc-600 mt-1">© 2026 Arnab Sarkar. All rights reserved.</p>
+				</div>
+				<div class="flex items-center gap-6 text-sm text-zinc-400">
+					<a href="https://linkedin.com" target="_blank" class="hover:text-white transition">LinkedIn</a>
+					<a href="mailto:contact@meetarnab.com" class="px-5 py-2.5 rounded-full bg-white text-black font-medium text-xs hover:bg-zinc-200 transition">Email Directly</a>
+				</div>
+			</div>
+		</footer>
+
+	</body>
+</html>
