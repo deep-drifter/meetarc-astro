@@ -1,5 +1,5 @@
 ---
-// Astro Page Component - Arnab Chakraborty Complete Lookbook Portfolio
+// Astro Page Component - Refined Visual & Editorial Portfolio
 ---
 
 <html lang="en" class="scroll-smooth">
@@ -25,24 +25,33 @@
 				animation-play-state: paused;
 			}
 			.bg-canvas {
-				background-color: #080807;
+				background-color: #060605;
 			}
 			.bg-lookbook-grid {
 				background-size: 100px 100px;
 				background-image: 
-					linear-gradient(to right, rgba(229, 226, 220, 0.025) 1px, transparent 1px),
-					linear-gradient(to bottom, rgba(229, 226, 220, 0.025) 1px, transparent 1px);
+					linear-gradient(to right, rgba(229, 226, 220, 0.02) 1px, transparent 1px),
+					linear-gradient(to bottom, rgba(229, 226, 220, 0.02) 1px, transparent 1px);
 			}
+			/* High-Opacity Nav Glass to prevent text bleed on scroll */
+			.nav-glass {
+				background: rgba(10, 10, 9, 0.88);
+				backdrop-filter: blur(20px) saturate(180%);
+				-webkit-backdrop-filter: blur(20px) saturate(180%);
+				border: 1px solid rgba(229, 226, 220, 0.12);
+				box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+			}
+			/* Titanium Glass Cards */
 			.titanium-glass {
-				background: rgba(255, 255, 255, 0.03);
-				backdrop-filter: blur(28px) saturate(180%);
-				-webkit-backdrop-filter: blur(28px) saturate(180%);
-				border: 1px solid rgba(229, 226, 220, 0.1);
-				box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 20px 50px rgba(0,0,0,0.6);
+				background: rgba(255, 255, 255, 0.025);
+				backdrop-filter: blur(24px);
+				-webkit-backdrop-filter: blur(24px);
+				border: 1px solid rgba(229, 226, 220, 0.08);
+				box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 20px 50px rgba(0,0,0,0.6);
 			}
 			.titanium-glass:hover {
-				border-color: rgba(229, 226, 220, 0.28);
-				box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25), 0 30px 60px rgba(0,0,0,0.8);
+				border-color: rgba(229, 226, 220, 0.25);
+				box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 30px 60px rgba(0,0,0,0.8);
 			}
 			.font-serif-editorial {
 				font-family: 'Cormorant Garamond', Georgia, serif;
@@ -50,12 +59,13 @@
 			.font-mono-tech {
 				font-family: 'Space Mono', monospace;
 			}
-			.img-grayscale-hover {
-				filter: grayscale(100%) contrast(110%);
+			/* Unified Editorial Image Filter */
+			.img-editorial-filter {
+				filter: grayscale(100%) contrast(120%) brightness(85%);
 				transition: filter 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 			}
-			.group:hover .img-grayscale-hover {
-				filter: grayscale(0%) contrast(100%);
+			.group:hover .img-editorial-filter {
+				filter: grayscale(0%) contrast(105%) brightness(100%);
 				transform: scale(1.04);
 			}
 		</style>
@@ -69,9 +79,9 @@
 			<div class="absolute bottom-[-10%] right-[10%] w-[700px] h-[700px] rounded-full bg-amber-500/[0.015] blur-[180px]"></div>
 		</div>
 
-		<!-- Navigation Dock -->
-		<nav class="fixed top-0 left-0 w-full z-50 px-4 sm:px-8 py-6">
-			<div class="max-w-7xl mx-auto titanium-glass rounded-full px-6 py-3.5 flex items-center justify-between">
+		<!-- Navigation Dock (Fixed Opacity Overlay) -->
+		<nav class="fixed top-0 left-0 w-full z-50 px-4 sm:px-8 py-5">
+			<div class="max-w-7xl mx-auto nav-glass rounded-full px-6 py-3.5 flex items-center justify-between">
 				<a href="#" class="flex items-center gap-3 group">
 					<span class="w-2 h-2 rounded-full bg-[#E5E2DC] group-hover:scale-150 transition-all duration-300"></span>
 					<span class="font-bold text-xs tracking-[0.2em] uppercase font-mono-tech text-white">ARNAB CHAKRABORTY</span>
@@ -134,21 +144,21 @@
 					</div>
 				</div>
 
-				<!-- Right Editorial Image Anchor Frame -->
+				<!-- Right Hero Canvas Frame -->
 				<div class="lg:col-span-5 relative group">
 					<div class="titanium-glass rounded-3xl p-3 border border-white/10 relative overflow-hidden shadow-2xl">
 						<div class="relative h-[480px] sm:h-[560px] rounded-2xl overflow-hidden bg-zinc-900">
 							<img 
 								src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=1200&q=80" 
-								alt="Arnab Chakraborty Studio Portrait" 
-								class="w-full h-full object-cover img-grayscale-hover"
+								alt="Atehliye Lookbook Canvas" 
+								class="w-full h-full object-cover img-editorial-filter"
 							/>
 							<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
 							
 							<div class="absolute bottom-6 left-6 right-6 font-mono-tech text-xs flex justify-between items-end text-zinc-300">
 								<div>
-									<p class="text-white font-semibold uppercase tracking-widest">FIGURE 01 // FOUNDER PORTRAIT</p>
-									<p class="text-[10px] text-zinc-400 mt-1">ATLANTA STUDIO CANVAS</p>
+									<p class="text-white font-semibold uppercase tracking-widest">EXHIBITION // ATEHLIYE LOOKBOOK</p>
+									<p class="text-[10px] text-zinc-400 mt-1">PHYSICAL CRAFT ARCHIVE</p>
 								</div>
 								<span class="text-[10px] px-2.5 py-1 rounded bg-black/60 border border-white/20">2026</span>
 							</div>
@@ -219,7 +229,7 @@
 					</p>
 				</div>
 
-				<!-- Bento Grid with Photos -->
+				<!-- Bento Grid with Curated Photos -->
 				<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
 					
 					<!-- Card 1: Flow MedTech (8 cols) -->
@@ -229,7 +239,7 @@
 								<img 
 									src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=80" 
 									alt="Flow MedTech Cardiovascular R&D" 
-									class="w-full h-full object-cover img-grayscale-hover"
+									class="w-full h-full object-cover img-editorial-filter"
 								/>
 								<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
 								<span class="absolute top-4 left-4 font-mono-tech text-[10px] px-3 py-1 rounded-full bg-black/60 border border-white/20 text-white">
@@ -262,7 +272,7 @@
 								<img 
 									src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80" 
 									alt="Georgia Tech Honor" 
-									class="w-full h-full object-cover img-grayscale-hover"
+									class="w-full h-full object-cover img-editorial-filter"
 								/>
 							</div>
 							<span class="font-mono-tech text-xs text-amber-300 tracking-widest uppercase">HONOR & ACCOLADE</span>
@@ -283,7 +293,7 @@
 								<img 
 									src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1000&q=80" 
 									alt="Awoken Matter Architectural Apparel" 
-									class="w-full h-full object-cover img-grayscale-hover"
+									class="w-full h-full object-cover img-editorial-filter"
 								/>
 								<span class="absolute top-4 left-4 font-mono-tech text-[10px] px-3 py-1 rounded-full bg-black/60 border border-white/20 text-white">
 									ARCHITECTURAL APPAREL
@@ -314,7 +324,7 @@
 								<img 
 									src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=1000&q=80" 
 									alt="River Health Product Strategy" 
-									class="w-full h-full object-cover img-grayscale-hover"
+									class="w-full h-full object-cover img-editorial-filter"
 								/>
 								<span class="absolute top-4 left-4 font-mono-tech text-[10px] px-3 py-1 rounded-full bg-black/60 border border-white/20 text-white">
 									HEALTHCARE STRATEGY
@@ -345,7 +355,7 @@
 								<img 
 									src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1000&q=80" 
 									alt="FoundersForge Startup Ecosystem" 
-									class="w-full h-full object-cover img-grayscale-hover"
+									class="w-full h-full object-cover img-editorial-filter"
 								/>
 							</div>
 
@@ -373,7 +383,7 @@
 								<img 
 									src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1000&q=80" 
 									alt="Deloitte Cortex Systems Operations" 
-									class="w-full h-full object-cover img-grayscale-hover"
+									class="w-full h-full object-cover img-editorial-filter"
 								/>
 							</div>
 
@@ -411,7 +421,7 @@
 					</p>
 				</div>
 
-				<!-- Explicit Accolade List Grid -->
+				<!-- Asymmetrical Editorial Accolade Showcase -->
 				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 font-mono-tech text-xs">
 					
 					<div class="bg-black/50 border border-white/10 p-6 rounded-2xl space-y-2">
@@ -495,7 +505,7 @@
 							<img 
 								src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=800&q=80" 
 								alt="Global Travel Perspectives" 
-								class="w-full h-full object-cover img-grayscale-hover"
+								class="w-full h-full object-cover img-editorial-filter"
 							/>
 						</div>
 						<div class="space-y-2">
@@ -513,7 +523,7 @@
 							<img 
 								src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80" 
 								alt="Automotive & Fine Art Design" 
-								class="w-full h-full object-cover img-grayscale-hover"
+								class="w-full h-full object-cover img-editorial-filter"
 							/>
 						</div>
 						<div class="space-y-2">
@@ -531,7 +541,7 @@
 							<img 
 								src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=800&q=80" 
 								alt="Speaking Engagements and Keynotes" 
-								class="w-full h-full object-cover img-grayscale-hover"
+								class="w-full h-full object-cover img-editorial-filter"
 							/>
 						</div>
 						<div class="space-y-2">
