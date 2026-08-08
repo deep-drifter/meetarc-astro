@@ -1,18 +1,18 @@
 ---
-// Astro Page Component - Award-Grade Portfolio for Arnab Chakraborty
+// Astro Page Component - High-Aura Portfolio for Arnab Chakraborty
 ---
 
 <html lang="en" class="scroll-smooth">
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>Arnab Chakraborty — Serial Founder & Biomedical Engineer</title>
+		<title>Arnab Chakraborty</title>
 		<script src="https://cdn.tailwindcss.com"></script>
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=JetBrains+Mono:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 		<style>
-			/* Dynamic Kinetic Marquee Animation */
+			/* Dynamic Marquee */
 			@keyframes marquee {
 				0% { transform: translateX(0%); }
 				100% { transform: translateX(-50%); }
@@ -20,62 +20,57 @@
 			.animate-marquee {
 				display: flex;
 				width: 200%;
-				animation: marquee 25s linear infinite;
+				animation: marquee 22s linear infinite;
 			}
 			.animate-marquee:hover {
 				animation-play-state: paused;
 			}
-			/* Grid background lines overlay */
+			/* Subtly textured background grid */
 			.bg-grid-pattern {
-				background-size: 60px 60px;
+				background-size: 80px 80px;
 				background-image: 
-					linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-					linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+					linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+					linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
 			}
-			/* Inner glass shine */
+			/* High-end glass cards */
 			.glass-card {
-				background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%);
-				backdrop-filter: blur(20px);
-				-webkit-backdrop-filter: blur(20px);
-				border: 1px solid rgba(255, 255, 255, 0.08);
+				background: linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.01) 100%);
+				backdrop-filter: blur(24px);
+				-webkit-backdrop-filter: blur(24px);
+				border: 1px solid rgba(255, 255, 255, 0.07);
 			}
 			.glass-card:hover {
-				border-color: rgba(165, 180, 252, 0.3);
-				box-shadow: 0 0 40px rgba(99, 102, 241, 0.12);
+				border-color: rgba(165, 180, 252, 0.25);
+				box-shadow: 0 0 50px rgba(99, 102, 241, 0.08);
 			}
 		</style>
 	</head>
-	<body class="bg-[#08090C] text-[#F4F4F5] font-['Plus_Jakarta_Sans'] antialiased selection:bg-indigo-500 selection:text-white overflow-x-hidden">
+	<body class="bg-[#060709] text-[#F4F4F5] font-['Plus_Jakarta_Sans'] antialiased selection:bg-indigo-500 selection:text-white overflow-x-hidden">
 
-		<!-- Architectural Grid & Ambient Background -->
-		<div class="fixed inset-0 bg-grid-pattern pointer-events-none z-0 opacity-80"></div>
+		<!-- Subtle Environmental Lighting -->
+		<div class="fixed inset-0 bg-grid-pattern pointer-events-none z-0 opacity-100"></div>
 		<div class="fixed inset-0 pointer-events-none z-0">
-			<div class="absolute top-[-10%] left-[-10%] w-[600px] h-[600px] rounded-full bg-indigo-600/15 blur-[140px]"></div>
-			<div class="absolute bottom-[-10%] right-[-10%] w-[700px] h-[700px] rounded-full bg-cyan-600/10 blur-[160px]"></div>
-			<div class="absolute top-[40%] right-[25%] w-[400px] h-[400px] rounded-full bg-purple-600/10 blur-[150px]"></div>
+			<div class="absolute top-[-15%] left-[-10%] w-[650px] h-[650px] rounded-full bg-indigo-600/10 blur-[160px]"></div>
+			<div class="absolute bottom-[-10%] right-[-10%] w-[750px] h-[750px] rounded-full bg-cyan-600/10 blur-[180px]"></div>
 		</div>
 
 		<!-- Navigation -->
-		<nav class="fixed top-0 left-0 w-full z-50 px-4 sm:px-8 py-5">
+		<nav class="fixed top-0 left-0 w-full z-50 px-4 sm:px-8 py-6">
 			<div class="max-w-7xl mx-auto glass-card rounded-full px-6 py-3.5 flex items-center justify-between">
 				<a href="#" class="flex items-center gap-2 group">
-					<span class="w-2.5 h-2.5 rounded-full bg-indigo-400 group-hover:scale-125 transition-transform"></span>
-					<span class="font-bold text-sm tracking-wider uppercase font-['JetBrains_Mono']">ARNAB<span class="text-indigo-400">.C</span></span>
+					<span class="w-2 h-2 rounded-full bg-indigo-400 group-hover:scale-150 transition-all duration-300"></span>
+					<span class="font-bold text-xs tracking-widest uppercase font-['JetBrains_Mono'] text-white">ARNAB CHAKRABORTY</span>
 				</a>
 				
-				<div class="hidden md:flex items-center gap-8 text-xs uppercase tracking-widest font-['JetBrains_Mono'] text-zinc-400">
-					<a href="#about" class="hover:text-white transition-colors">01. About</a>
-					<a href="#ventures" class="hover:text-white transition-colors">02. Matrix</a>
-					<a href="#outlook" class="hover:text-white transition-colors">03. Outlook</a>
-					<a href="#impact" class="hover:text-white transition-colors">04. Recognition</a>
+				<div class="hidden md:flex items-center gap-8 text-[11px] uppercase tracking-widest font-['JetBrains_Mono'] text-zinc-400">
+					<a href="#manifesto" class="hover:text-white transition-colors">01. Manifesto</a>
+					<a href="#ventures" class="hover:text-white transition-colors">02. Work</a>
+					<a href="#outlook" class="hover:text-white transition-colors">03. Forecasts</a>
+					<a href="#impact" class="hover:text-white transition-colors">04. Distinction</a>
 				</div>
 
 				<div class="flex items-center gap-4">
-					<div class="hidden lg:flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[11px] font-['JetBrains_Mono'] text-zinc-400">
-						<span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-						AVAILABLE FOR BOARDS & ADVISORY
-					</div>
-					<a href="#contact" class="px-5 py-2 rounded-full bg-white text-black font-semibold text-xs tracking-wide hover:bg-zinc-200 transition-all shadow-md">
+					<a href="#contact" class="px-5 py-2 rounded-full bg-white text-black font-semibold text-xs tracking-wider uppercase hover:bg-zinc-200 transition-all">
 						Connect
 					</a>
 				</div>
@@ -83,177 +78,170 @@
 		</nav>
 
 		<!-- Hero Section -->
-		<section class="relative z-10 min-h-screen flex items-center justify-center pt-28 pb-16 px-6">
+		<section class="relative z-10 min-h-screen flex items-center justify-center pt-32 pb-20 px-6">
 			<div class="max-w-5xl mx-auto text-center space-y-10">
 				
-				<!-- Telemetry Badge -->
-				<div class="inline-flex items-center gap-3 px-4 py-2 rounded-full glass-card text-xs font-['JetBrains_Mono'] text-indigo-300">
-					<span>ATLANTA, GA</span>
-					<span class="text-zinc-600">•</span>
-					<span>GT BME '14</span>
-					<span class="text-zinc-600">•</span>
-					<span class="text-emerald-400 flex items-center gap-1.5">
-						<span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
-						2026 EDITION
+				<!-- Live Telemetry Pill -->
+				<div class="inline-flex items-center gap-3 px-4 py-1.5 rounded-full glass-card text-xs font-['JetBrains_Mono'] text-indigo-300 border border-indigo-500/20">
+					<span class="flex items-center gap-2">
+						<span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+						<span class="text-white">ATLANTA</span>
 					</span>
+					<span class="text-zinc-600">|</span>
+					<span>GT BME</span>
+					<span class="text-zinc-600">|</span>
+					<span>MEDTECH x SMART MATERIALS</span>
 				</div>
 
-				<!-- Massive Display Headline -->
+				<!-- Bold Statement Headline -->
 				<h1 class="text-4xl sm:text-7xl lg:text-8xl font-light tracking-tight leading-[1.02]">
-					Architecting at the edge of <br>
+					Predicting shifts. <br>
 					<span class="font-['Playfair_Display'] italic font-normal bg-gradient-to-r from-white via-indigo-100 to-indigo-400 bg-clip-text text-transparent">
-						Health, Smart Textiles & Systems.
+						Engineering physical realities.
 					</span>
 				</h1>
 
-				<p class="max-w-2xl mx-auto text-zinc-400 text-base sm:text-xl font-light leading-relaxed">
-					Serial founder & biomedical engineer forecasting industry shifts, inventing medical devices, and building trend-setting physical and digital experiences.
+				<p class="max-w-2xl mx-auto text-zinc-400 text-base sm:text-lg font-light leading-relaxed">
+					Biomedical engineer & multi-industry founder operating at the convergence of cardiovascular medical devices, luxury smart apparel, and venture networks.
 				</p>
 
-				<!-- Action Buttons -->
-				<div class="pt-2 flex flex-col sm:flex-row gap-4 justify-center items-center">
-					<a href="#ventures" class="w-full sm:w-auto px-8 py-4 rounded-full bg-white text-black font-medium text-sm hover:bg-indigo-50 transition-all flex items-center justify-center gap-3 shadow-lg shadow-white/5">
-						Explore Portfolio Matrix
-						<span class="text-lg">→</span>
+				<!-- Buttons -->
+				<div class="pt-4 flex flex-col sm:flex-row gap-4 justify-center items-center font-['JetBrains_Mono'] text-xs">
+					<a href="#ventures" class="w-full sm:w-auto px-8 py-4 rounded-full bg-white text-black font-semibold tracking-wider uppercase hover:bg-zinc-200 transition-all flex items-center justify-center gap-3 shadow-xl shadow-white/5">
+						Selected Work
+						<span>↓</span>
 					</a>
-					<a href="#outlook" class="w-full sm:w-auto px-8 py-4 rounded-full glass-card text-zinc-300 font-medium text-sm hover:text-white transition-all flex items-center justify-center gap-2">
-						<span class="w-2 h-2 rounded-full bg-indigo-400"></span>
-						Trend Forecasts
+					<a href="#outlook" class="w-full sm:w-auto px-8 py-4 rounded-full glass-card text-zinc-300 font-medium tracking-wider uppercase hover:text-white transition-all flex items-center justify-center gap-2">
+						Trend Analysis
 					</a>
 				</div>
 			</div>
 		</section>
 
-		<!-- Infinite Kinetic Marquee -->
-		<div class="relative z-10 py-6 border-y border-white/10 bg-black/40 backdrop-blur-md overflow-hidden my-12">
-			<div class="animate-marquee whitespace-nowrap flex items-center gap-12 font-['JetBrains_Mono'] text-xs tracking-widest text-zinc-400 uppercase">
-				<span>Flow MedTech • Cardiovascular Implants</span>
-				<span class="text-indigo-500">✦</span>
-				<span>Awoken Matter • Smart Textiles & Fashion Tech</span>
-				<span class="text-indigo-500">✦</span>
-				<span>FoundersForge • Venture Acceleration</span>
-				<span class="text-indigo-500">✦</span>
-				<span>Georgia Tech 40 Under 40 Honoree</span>
-				<span class="text-indigo-500">✦</span>
-				<span>Biomedical Innovation & Trend Forecasting</span>
-				<span class="text-indigo-500">✦</span>
-				<span>Flow MedTech • Cardiovascular Implants</span>
-				<span class="text-indigo-500">✦</span>
-				<span>Awoken Matter • Smart Textiles & Fashion Tech</span>
-				<span class="text-indigo-500">✦</span>
-				<span>FoundersForge • Venture Acceleration</span>
-				<span class="text-indigo-500">✦</span>
+		<!-- Kinetic Marquee -->
+		<div class="relative z-10 py-5 border-y border-white/5 bg-black/50 backdrop-blur-md overflow-hidden">
+			<div class="animate-marquee whitespace-nowrap flex items-center gap-12 font-['JetBrains_Mono'] text-xs tracking-widest text-zinc-500 uppercase">
+				<span>FLOW MEDTECH</span>
+				<span class="text-indigo-400">✦</span>
+				<span>AWOKEN MATTER</span>
+				<span class="text-indigo-400">✦</span>
+				<span>FOUNDERSFORGE</span>
+				<span class="text-indigo-400">✦</span>
+				<span>GEORGIA TECH 40 UNDER 40</span>
+				<span class="text-indigo-400">✦</span>
+				<span>CARDIOVASCULAR IMPLANTS</span>
+				<span class="text-indigo-400">✦</span>
+				<span>CONDUCTIVE TEXTILES</span>
+				<span class="text-indigo-400">✦</span>
+				<span>FLOW MEDTECH</span>
+				<span class="text-indigo-400">✦</span>
+				<span>AWOKEN MATTER</span>
+				<span class="text-indigo-400">✦</span>
 			</div>
 		</div>
 
-		<!-- About / Thesis Section -->
-		<section id="about" class="relative z-10 py-24 px-6">
-			<div class="max-w-6xl mx-auto glass-card rounded-3xl p-8 sm:p-16 border border-white/10 relative overflow-hidden">
-				<div class="absolute top-0 right-0 w-96 h-96 bg-indigo-500/10 rounded-full blur-[100px] pointer-events-none"></div>
-				
+		<!-- Manifesto Section -->
+		<section id="manifesto" class="relative z-10 py-32 px-6">
+			<div class="max-w-6xl mx-auto glass-card rounded-3xl p-8 sm:p-16 relative overflow-hidden">
 				<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-					<div class="lg:col-span-4 space-y-4">
-						<span class="font-['JetBrains_Mono'] text-xs text-indigo-400 tracking-widest uppercase">// 01. PHILOSOPHY</span>
-						<h2 class="text-3xl sm:text-4xl font-light leading-tight">Engineering Across Convergence</h2>
+					<div class="lg:col-span-4 space-y-3">
+						<span class="font-['JetBrains_Mono'] text-xs text-indigo-400 tracking-widest uppercase">// 01. THESIS</span>
+						<h2 class="text-3xl sm:text-4xl font-light leading-tight">Most innovation dies in silos. <br><span class="italic font-['Playfair_Display'] text-indigo-300">I build across them.</span></h2>
 					</div>
 					<div class="lg:col-span-8 space-y-6 text-zinc-300 text-base sm:text-lg leading-relaxed font-light">
 						<p>
-							With a background in Biomedical Engineering from Georgia Tech, my focus centers on solving complex physical and systemic challenges. As co-founder of <strong class="text-white font-medium">Flow MedTech</strong>, I engineered stroke-prevention cardiovascular implants to solve clinical challenges in atrial fibrillation patients.
+							Real breakthroughs don't happen inside isolated industries—they happen at the collision points. Trained in Biomedical Engineering at Georgia Tech, I co-founded <strong class="text-white font-normal">Flow MedTech</strong> to engineer stroke-prevention heart implants that solve critical clinical risks.
 						</p>
 						<p>
-							That same rigorous engineering framework now spans high-fashion smart apparel with <strong class="text-white font-medium">Awoken Matter</strong>—fusing wearable sensors with contemporary garment design—and founder ecosystem development through <strong class="text-white font-medium">FoundersForge</strong>.
+							I apply that same technical rigour to physical culture and design systems with <strong class="text-white font-normal">Awoken Matter</strong>—fusing wearable sensors into modern garments—and venture architecture with <strong class="text-white font-normal">FoundersForge</strong>. No fluff. Just execution.
 						</p>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<!-- Bento Grid Venture Portfolio -->
+		<!-- Selected Work Bento Grid -->
 		<section id="ventures" class="relative z-10 py-24 px-6">
 			<div class="max-w-6xl mx-auto space-y-12">
 				<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
 					<div>
 						<span class="font-['JetBrains_Mono'] text-xs text-indigo-400 tracking-widest uppercase">// 02. VENTURE MATRIX</span>
-						<h2 class="text-3xl sm:text-5xl font-light mt-2">Selected Innovations</h2>
+						<h2 class="text-3xl sm:text-5xl font-light mt-2">Core Initiatives</h2>
 					</div>
-					<p class="text-zinc-400 text-sm max-w-sm font-light">
-						Cross-industry ventures built across medical technology, functional textiles, and founder infrastructure.
+					<p class="text-zinc-400 text-xs font-['JetBrains_Mono'] tracking-wider uppercase">
+						MEDTECH • SMART MATERIALS • ECOSYSTEMS
 					</p>
 				</div>
 
-				<!-- Bento Grid Layout -->
+				<!-- Bento Grid -->
 				<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
 					
-					<!-- Bento Card 1: Primary Feature - Flow MedTech (8 Columns) -->
-					<div class="md:col-span-8 glass-card rounded-3xl p-8 sm:p-10 flex flex-col justify-between space-y-8 group relative overflow-hidden transition-all">
-						<div class="flex justify-between items-start">
-							<div class="space-y-2">
-								<span class="font-['JetBrains_Mono'] text-xs text-indigo-400 tracking-wider uppercase">CARDIOVASCULAR IMPLANTS</span>
-								<h3 class="text-3xl font-semibold text-white group-hover:text-indigo-200 transition-colors">Flow MedTech</h3>
+					<!-- Bento 1: Flow MedTech (8 cols) -->
+					<div class="md:col-span-8 glass-card rounded-3xl p-8 sm:p-10 flex flex-col justify-between space-y-8 group">
+						<div class="space-y-4">
+							<div class="flex justify-between items-start">
+								<span class="font-['JetBrains_Mono'] text-xs text-indigo-400 tracking-wider uppercase">01 / BIOMEDICAL ENGINEERING</span>
+								<span class="px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-xs font-['JetBrains_Mono']">Co-Founder & CTO</span>
 							</div>
-							<span class="px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-xs font-['JetBrains_Mono']">Co-Founder & CTO</span>
+							<h3 class="text-3xl font-semibold text-white group-hover:text-indigo-200 transition-colors">Flow MedTech</h3>
+							<p class="text-zinc-300 text-base leading-relaxed font-light max-w-xl">
+								Engineered a novel Left Atrial Appendage (LAA) occlusion heart implant designed to eliminate stroke risk in atrial fibrillation patients without long-term blood thinners. Supported by the Cleveland Clinic GCIC.
+							</p>
 						</div>
 
-						<p class="text-zinc-300 text-base leading-relaxed max-w-2xl font-light">
-							Engineered a novel Left Atrial Appendage (LAA) occlusion heart implant designed to eliminate stroke risk in atrial fibrillation patients without long-term blood thinners. Backed by the Cleveland Clinic GCIC.
-						</p>
-
-						<div class="pt-6 border-t border-white/10 flex flex-wrap items-center justify-between gap-4 font-['JetBrains_Mono'] text-xs text-zinc-400">
-							<div class="flex items-center gap-4">
-								<span>[PATENTS PROPRIETARY]</span>
-								<span>[CLINICAL WORKFLOWS]</span>
-							</div>
-							<span class="text-indigo-400 group-hover:translate-x-1 transition-transform">Explore MedTech Case →</span>
+						<div class="pt-6 border-t border-white/5 flex flex-wrap items-center justify-between gap-4 font-['JetBrains_Mono'] text-xs text-zinc-400">
+							<span>CLINICAL IMPLANTS • PATENTED TECH</span>
+							<span class="text-indigo-400 group-hover:translate-x-1 transition-transform">Explore MedTech →</span>
 						</div>
 					</div>
 
-					<!-- Bento Card 2: GT Recognition Tile (4 Columns) -->
-					<div class="md:col-span-4 glass-card rounded-3xl p-8 flex flex-col justify-between space-y-6 bg-gradient-to-br from-indigo-950/30 to-black/60 border-indigo-500/20">
+					<!-- Bento 2: Distinction Tile (4 cols) -->
+					<div class="md:col-span-4 glass-card rounded-3xl p-8 flex flex-col justify-between space-y-6 bg-gradient-to-br from-indigo-950/20 to-black/80">
 						<div class="space-y-3">
-							<span class="font-['JetBrains_Mono'] text-xs text-amber-400 tracking-widest uppercase">HONOR & ACCOLADE</span>
-							<h4 class="text-2xl font-light">Georgia Tech 40 Under 40</h4>
+							<span class="font-['JetBrains_Mono'] text-xs text-amber-400 tracking-widest uppercase">ACCOLADE</span>
+							<h4 class="text-2xl font-light text-white">Georgia Tech 40 Under 40</h4>
 						</div>
 						<p class="text-zinc-400 text-xs leading-relaxed font-light">
 							Recognized in GT's inaugural honoree class for pioneering cardiovascular device innovation and cross-industry leadership.
 						</p>
-						<div class="pt-4 border-t border-white/10 font-['JetBrains_Mono'] text-xs text-amber-300">
+						<div class="pt-4 border-t border-white/5 font-['JetBrains_Mono'] text-xs text-amber-300">
 							INAUGURAL CLASS HONOREE
 						</div>
 					</div>
 
-					<!-- Bento Card 3: Awoken Matter (6 Columns) -->
+					<!-- Bento 3: Awoken Matter (6 cols) -->
 					<div class="md:col-span-6 glass-card rounded-3xl p-8 flex flex-col justify-between space-y-8 group">
 						<div class="space-y-4">
 							<div class="flex justify-between items-start">
-								<span class="font-['JetBrains_Mono'] text-xs text-cyan-400 tracking-wider uppercase">FASHION TECH & SMART TEXTILES</span>
+								<span class="font-['JetBrains_Mono'] text-xs text-cyan-400 tracking-wider uppercase">02 / SMART APPAREL</span>
 								<span class="px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-300 text-xs font-['JetBrains_Mono']">Founder</span>
 							</div>
 							<h3 class="text-2xl font-semibold text-white group-hover:text-cyan-200 transition-colors">Awoken Matter</h3>
 							<p class="text-zinc-400 text-sm leading-relaxed font-light">
-								Fusing contemporary high-fashion design systems with smart textiles, integrated sensing materials, and futuristic functional apparel engineering.
+								Fusing contemporary high-fashion design systems with smart textiles, integrated sensing materials, and futuristic functional garment engineering.
 							</p>
 						</div>
-						<div class="pt-6 border-t border-white/10 flex justify-between items-center font-['JetBrains_Mono'] text-xs text-zinc-400">
+						<div class="pt-6 border-t border-white/5 flex justify-between items-center font-['JetBrains_Mono'] text-xs text-zinc-400">
 							<span>@awokenmatter</span>
-							<span class="text-cyan-400 group-hover:translate-x-1 transition-transform">View Collection System →</span>
+							<span class="text-cyan-400 group-hover:translate-x-1 transition-transform">Explore System →</span>
 						</div>
 					</div>
 
-					<!-- Bento Card 4: FoundersForge (6 Columns) -->
+					<!-- Bento 4: FoundersForge (6 cols) -->
 					<div class="md:col-span-6 glass-card rounded-3xl p-8 flex flex-col justify-between space-y-8 group">
 						<div class="space-y-4">
 							<div class="flex justify-between items-start">
-								<span class="font-['JetBrains_Mono'] text-xs text-purple-400 tracking-wider uppercase">EDTECH & VENTURE BUILDING</span>
+								<span class="font-['JetBrains_Mono'] text-xs text-purple-400 tracking-wider uppercase">03 / VENTURE SYSTEMS</span>
 								<span class="px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-300 text-xs font-['JetBrains_Mono']">Ecosystem Builder</span>
 							</div>
 							<h3 class="text-2xl font-semibold text-white group-hover:text-purple-200 transition-colors">FoundersForge</h3>
 							<p class="text-zinc-400 text-sm leading-relaxed font-light">
-								Accelerating regional entrepreneurship through actionable startup curricula, capital readiness, and high-impact founder mentorship networks.
+								Accelerating high-conviction entrepreneurs through tactical startup execution, founder education, and capital-readiness infrastructure.
 							</p>
 						</div>
-						<div class="pt-6 border-t border-white/10 flex justify-between items-center font-['JetBrains_Mono'] text-xs text-zinc-400">
-							<span>VENTURE ACCELERATION</span>
-							<span class="text-purple-400 group-hover:translate-x-1 transition-transform">Learn More →</span>
+						<div class="pt-6 border-t border-white/5 flex justify-between items-center font-['JetBrains_Mono'] text-xs text-zinc-400">
+							<span>ACCELERATION INFRASTRUCTURE</span>
+							<span class="text-purple-400 group-hover:translate-x-1 transition-transform">Explore Platform →</span>
 						</div>
 					</div>
 
@@ -261,25 +249,25 @@
 			</div>
 		</section>
 
-		<!-- Trend Forecasting / Outlook Section -->
+		<!-- Trend Forecasting Section -->
 		<section id="outlook" class="relative z-10 py-24 px-6">
 			<div class="max-w-5xl mx-auto space-y-12">
 				<div class="space-y-2">
-					<span class="font-['JetBrains_Mono'] text-xs text-indigo-400 tracking-widest uppercase">// 03. FORECASTS & ESSAYS</span>
-					<h2 class="text-3xl sm:text-4xl font-light">The Trend Outlook</h2>
+					<span class="font-['JetBrains_Mono'] text-xs text-indigo-400 tracking-widest uppercase">// 03. FORESIGHT</span>
+					<h2 class="text-3xl sm:text-4xl font-light">Trend Forecasts & Essays</h2>
 				</div>
 
 				<div class="space-y-4">
 					
-					<article class="glass-card p-6 sm:p-8 rounded-2xl flex flex-col sm:flex-row justify-between sm:items-center gap-6 group cursor-pointer hover:bg-white/[0.04] transition-all">
+					<article class="glass-card p-6 sm:p-8 rounded-2xl flex flex-col sm:flex-row justify-between sm:items-center gap-6 group cursor-pointer">
 						<div class="space-y-2 max-w-2xl">
 							<div class="flex items-center gap-3 font-['JetBrains_Mono'] text-xs text-zinc-500">
-								<span>MEDTECH & SENSORS</span>
+								<span>MEDTECH & SENSING</span>
 								<span>•</span>
 								<span>5 MIN READ</span>
 							</div>
 							<h3 class="text-xl font-medium text-white group-hover:text-indigo-300 transition-colors">
-								Cardiovascular Innovation: Bridging Implantable Devices with Everyday Wearable Biosensors
+								Beyond the Screen: Why the Next Generation of Diagnostics Is Woven Into Fabric
 							</h3>
 						</div>
 						<div class="font-['JetBrains_Mono'] text-xs text-indigo-400 flex items-center gap-2 group-hover:translate-x-2 transition-transform">
@@ -287,15 +275,15 @@
 						</div>
 					</article>
 
-					<article class="glass-card p-6 sm:p-8 rounded-2xl flex flex-col sm:flex-row justify-between sm:items-center gap-6 group cursor-pointer hover:bg-white/[0.04] transition-all">
+					<article class="glass-card p-6 sm:p-8 rounded-2xl flex flex-col sm:flex-row justify-between sm:items-center gap-6 group cursor-pointer">
 						<div class="space-y-2 max-w-2xl">
 							<div class="flex items-center gap-3 font-['JetBrains_Mono'] text-xs text-zinc-500">
-								<span>FASHION TECHNOLOGY</span>
+								<span>MATERIALS & DESIGN</span>
 								<span>•</span>
 								<span>4 MIN READ</span>
 							</div>
 							<h3 class="text-xl font-medium text-white group-hover:text-cyan-300 transition-colors">
-								Functional Aesthetics: Why the Next Decade Belongs to Conductive Textiles
+								Functional Materiality: Modern Design Systems for the Physical World
 							</h3>
 						</div>
 						<div class="font-['JetBrains_Mono'] text-xs text-cyan-400 flex items-center gap-2 group-hover:translate-x-2 transition-transform">
@@ -303,7 +291,7 @@
 						</div>
 					</article>
 
-					<article class="glass-card p-6 sm:p-8 rounded-2xl flex flex-col sm:flex-row justify-between sm:items-center gap-6 group cursor-pointer hover:bg-white/[0.04] transition-all">
+					<article class="glass-card p-6 sm:p-8 rounded-2xl flex flex-col sm:flex-row justify-between sm:items-center gap-6 group cursor-pointer">
 						<div class="space-y-2 max-w-2xl">
 							<div class="flex items-center gap-3 font-['JetBrains_Mono'] text-xs text-zinc-500">
 								<span>ECOSYSTEMS</span>
@@ -311,7 +299,7 @@
 								<span>6 MIN READ</span>
 							</div>
 							<h3 class="text-xl font-medium text-white group-hover:text-purple-300 transition-colors">
-								Capital-Efficient Founder Infrastructure Beyond Silicon Valley
+								The Anti-Fluff Playbook: Building Regional Founder Networks That Execute
 							</h3>
 						</div>
 						<div class="font-['JetBrains_Mono'] text-xs text-purple-400 flex items-center gap-2 group-hover:translate-x-2 transition-transform">
@@ -323,28 +311,53 @@
 			</div>
 		</section>
 
-		<!-- Footer & Contact -->
-		<footer id="contact" class="relative z-10 py-24 px-6 border-t border-white/10 bg-black/60">
+		<!-- Recognition / Distinction -->
+		<section id="impact" class="relative z-10 py-24 px-6">
+			<div class="max-w-6xl mx-auto glass-card rounded-3xl p-8 sm:p-16 border border-white/10">
+				<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+					<div class="space-y-6">
+						<span class="font-['JetBrains_Mono'] text-xs text-indigo-400 tracking-widest uppercase">// 04. DISTINCTION</span>
+						<h2 class="text-3xl sm:text-4xl font-light leading-tight">Recognized across innovation ecosystems.</h2>
+						<p class="text-zinc-400 text-sm font-light leading-relaxed">
+							Honored in Georgia Tech's inaugural 40 Under 40 class and the Tri-Cities Business Journal 40 Under 40 for patenting stroke-prevention heart implants and scaling multi-industry ventures.
+						</p>
+					</div>
+					<div class="grid grid-cols-2 gap-6">
+						<div class="bg-black/40 border border-white/5 p-6 rounded-2xl text-center space-y-2">
+							<p class="text-2xl sm:text-3xl font-bold text-white font-['JetBrains_Mono']">40 UNDER 40</p>
+							<p class="text-[11px] text-zinc-500 uppercase tracking-wider font-['JetBrains_Mono']">Georgia Tech</p>
+						</div>
+						<div class="bg-black/40 border border-white/5 p-6 rounded-2xl text-center space-y-2">
+							<p class="text-2xl sm:text-3xl font-bold text-white font-['JetBrains_Mono']">LAA PATENT</p>
+							<p class="text-[11px] text-zinc-500 uppercase tracking-wider font-['JetBrains_Mono']">Heart Device</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer & Direct Engagement -->
+		<footer id="contact" class="relative z-10 py-24 px-6 border-t border-white/10 bg-black/80">
 			<div class="max-w-6xl mx-auto flex flex-col lg:flex-row justify-between items-start lg:items-center gap-12">
 				<div class="space-y-4 max-w-xl">
-					<span class="font-['JetBrains_Mono'] text-xs text-indigo-400 tracking-widest uppercase">// 04. ENGAGEMENT</span>
-					<h2 class="text-4xl font-light">Let's build the future together.</h2>
+					<span class="font-['JetBrains_Mono'] text-xs text-indigo-400 tracking-widest uppercase">// DIRECT ENGAGEMENT</span>
+					<h2 class="text-4xl font-light">Building what's next.</h2>
 					<p class="text-zinc-400 text-sm font-light leading-relaxed">
-						Open for advisory roles, speaking engagements, strategic board seats, and collaborative venture builds.
+						Available for advisory boards, key opinion leadership, trend strategy, and venture creation.
 					</p>
 				</div>
 
 				<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full lg:w-auto">
-					<a href="mailto:contact@meetarnab.com" class="px-8 py-4 rounded-full bg-white text-black font-semibold text-xs tracking-wider uppercase hover:bg-zinc-200 transition-all text-center">
+					<a href="mailto:contact@meetarnab.com" class="px-8 py-4 rounded-full bg-white text-black font-semibold text-xs tracking-wider uppercase font-['JetBrains_Mono'] hover:bg-zinc-200 transition-all text-center">
 						Email Directly
 					</a>
-					<a href="https://www.linkedin.com/in/arnabchakraborty" target="_blank" class="px-8 py-4 rounded-full glass-card text-white font-semibold text-xs tracking-wider uppercase hover:bg-white/10 transition-all text-center">
-						LinkedIn Profile
+					<a href="https://www.linkedin.com/in/arnabchakraborty" target="_blank" class="px-8 py-4 rounded-full glass-card text-white font-semibold text-xs tracking-wider uppercase font-['JetBrains_Mono'] hover:bg-white/10 transition-all text-center">
+						LinkedIn
 					</a>
 				</div>
 			</div>
 
-			<div class="max-w-6xl mx-auto mt-20 pt-8 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center gap-4 font-['JetBrains_Mono'] text-xs text-zinc-500">
+			<div class="max-w-6xl mx-auto mt-20 pt-8 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center gap-4 font-['JetBrains_Mono'] text-xs text-zinc-600">
 				<div>© 2026 ARNAB CHAKRABORTY. ALL RIGHTS RESERVED.</div>
 				<div class="flex items-center gap-6">
 					<a href="https://instagram.com/awokenmatter" target="_blank" class="hover:text-white transition-colors">INSTAGRAM</a>
