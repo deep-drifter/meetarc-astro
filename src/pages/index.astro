@@ -1,5 +1,5 @@
 ---
-// Astro Page Component - Arnab Chakraborty Complete Portfolio
+// Astro Page Component - Arnab Chakraborty Complete Responsive Portfolio
 ---
 
 <html lang="en" class="scroll-smooth">
@@ -33,12 +33,13 @@
 					linear-gradient(to right, rgba(229, 226, 220, 0.025) 1px, transparent 1px),
 					linear-gradient(to bottom, rgba(229, 226, 220, 0.025) 1px, transparent 1px);
 			}
+			/* High-opacity nav glass preventing text bleed-through on scroll */
 			.nav-glass {
-				background: rgba(10, 10, 9, 0.88);
-				backdrop-filter: blur(20px) saturate(180%);
-				-webkit-backdrop-filter: blur(20px) saturate(180%);
-				border: 1px solid rgba(229, 226, 220, 0.12);
-				box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+				background: rgba(8, 8, 7, 0.95);
+				backdrop-filter: blur(24px) saturate(180%);
+				-webkit-backdrop-filter: blur(24px) saturate(180%);
+				border: 1px solid rgba(229, 226, 220, 0.15);
+				box-shadow: 0 10px 30px rgba(0,0,0,0.9);
 			}
 			.titanium-glass {
 				background: rgba(255, 255, 255, 0.03);
@@ -57,14 +58,22 @@
 			.font-mono-tech {
 				font-family: 'Space Mono', monospace;
 			}
-			/* Restored Black & White to Full Color Hover Physics */
+
+			/* MOBILE & TOUCH DEVICES: Full vibrant color by default */
 			.img-editorial-filter {
-				filter: grayscale(100%) contrast(110%) brightness(85%);
+				filter: grayscale(0%) contrast(100%) brightness(100%);
 				transition: filter 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 			}
-			.group:hover .img-editorial-filter {
-				filter: grayscale(0%) contrast(100%) brightness(100%);
-				transform: scale(1.05);
+
+			/* DESKTOP WITH MOUSE: B&W by default, reveals full color on hover */
+			@media (hover: hover) and (pointer: fine) {
+				.img-editorial-filter {
+					filter: grayscale(100%) contrast(110%) brightness(85%);
+				}
+				.group:hover .img-editorial-filter {
+					filter: grayscale(0%) contrast(100%) brightness(100%);
+					transform: scale(1.05);
+				}
 			}
 		</style>
 	</head>
@@ -78,8 +87,8 @@
 		</div>
 
 		<!-- Navigation Dock -->
-		<nav class="fixed top-0 left-0 w-full z-50 px-4 sm:px-8 py-5">
-			<div class="max-w-7xl mx-auto nav-glass rounded-full px-6 py-3.5 flex items-center justify-between">
+		<nav class="fixed top-0 left-0 w-full z-50 px-4 sm:px-8 py-4 sm:py-5">
+			<div class="max-w-7xl mx-auto nav-glass rounded-full px-5 sm:px-6 py-3 flex items-center justify-between">
 				<a href="#" class="flex items-center gap-3 group">
 					<span class="w-2 h-2 rounded-full bg-[#E5E2DC] group-hover:scale-150 transition-all duration-300"></span>
 					<span class="font-bold text-xs tracking-[0.2em] uppercase font-mono-tech text-white">ARNAB CHAKRABORTY</span>
@@ -94,20 +103,21 @@
 				</div>
 
 				<div class="flex items-center gap-4">
-					<a href="#contact" class="px-5 py-2 rounded-full bg-[#E5E2DC] text-black font-semibold text-[11px] tracking-widest uppercase font-mono-tech hover:bg-white transition-all">
-						Direct Engagement
+					<a href="#contact" class="px-4 sm:px-5 py-2 rounded-full bg-[#E5E2DC] text-black font-semibold text-[10px] sm:text-[11px] tracking-widest uppercase font-mono-tech hover:bg-white transition-all">
+						<span class="sm:hidden">CONNECT</span>
+						<span class="hidden sm:inline">DIRECT ENGAGEMENT</span>
 					</a>
 				</div>
 			</div>
 		</nav>
 
 		<!-- Hero Section -->
-		<section class="relative z-10 min-h-screen flex items-center justify-center pt-36 pb-20 px-6">
-			<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+		<section class="relative z-10 min-h-screen flex items-center justify-center pt-28 sm:pt-36 pb-16 sm:pb-20 px-6">
+			<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
 				
 				<!-- Left Text Column -->
-				<div class="lg:col-span-7 space-y-8 text-center lg:text-left">
-					<div class="inline-flex items-center gap-3 px-4 py-1.5 rounded-full titanium-glass text-[11px] font-mono-tech text-zinc-300 border border-white/10">
+				<div class="lg:col-span-7 space-y-6 sm:space-y-8 text-center lg:text-left">
+					<div class="inline-flex items-center gap-2 sm:gap-3 px-3.5 sm:px-4 py-1.5 rounded-full titanium-glass text-[10px] sm:text-[11px] font-mono-tech text-zinc-300 border border-white/10 flex-wrap justify-center lg:justify-start">
 						<span class="flex items-center gap-2">
 							<span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
 							<span class="text-white">ATLANTA // GA</span>
@@ -120,14 +130,14 @@
 						<span>TOP 40 LAA INVENTOR</span>
 					</div>
 
-					<h1 class="text-5xl sm:text-7xl lg:text-8xl font-light tracking-tight leading-[0.92] text-white">
+					<h1 class="text-4xl sm:text-7xl lg:text-8xl font-light tracking-tight leading-[0.95] sm:leading-[0.92] text-white">
 						From Sketches <br>
 						<span class="font-serif-editorial italic font-normal text-[#E5E2DC] opacity-90">
 							to Systemic Solutions.
 						</span>
 					</h1>
 
-					<p class="max-w-xl text-zinc-400 text-base sm:text-lg font-light leading-relaxed tracking-wide">
+					<p class="max-w-xl text-zinc-400 text-sm sm:text-lg font-light leading-relaxed tracking-wide mx-auto lg:mx-0">
 						GT Biomedical Engineer, patented cardiovascular device inventor, and multi-industry leader operating across MedTech, healthcare product strategy, architectural apparel, and venture networks.
 					</p>
 
@@ -145,11 +155,11 @@
 				<!-- Right Real Headshot Frame -->
 				<div class="lg:col-span-5 relative group">
 					<div class="titanium-glass rounded-3xl p-3 border border-white/10 relative overflow-hidden shadow-2xl">
-						<div class="relative h-[480px] sm:h-[560px] rounded-2xl overflow-hidden bg-purple-900/30">
+						<div class="relative h-[380px] sm:h-[520px] rounded-2xl overflow-hidden bg-purple-900/30">
 							<img 
 								src="/Hero image.jpeg" 
 								alt="Arnab Chakraborty Portrait" 
-								class="w-full h-full object-cover img-editorial-filter"
+								class="w-full h-full object-cover object-[center_20%] img-editorial-filter"
 							/>
 							<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
 							
@@ -188,16 +198,16 @@
 		</div>
 
 		<!-- Origins & Personal Narrative Section -->
-		<section id="manifesto" class="relative z-10 py-32 px-6">
-			<div class="max-w-6xl mx-auto titanium-glass rounded-3xl p-8 sm:p-16 relative overflow-hidden">
-				<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+		<section id="manifesto" class="relative z-10 py-20 sm:py-32 px-6">
+			<div class="max-w-6xl mx-auto titanium-glass rounded-3xl p-6 sm:p-16 relative overflow-hidden">
+				<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
 					<div class="lg:col-span-4 space-y-3">
 						<span class="font-mono-tech text-xs text-zinc-400 tracking-[0.25em] uppercase">// 01. ORIGINS & PHILOSOPHY</span>
 						<h2 class="text-3xl sm:text-5xl font-light leading-tight text-white font-serif-editorial">
 							Building with <br><span class="italic text-[#E5E2DC]">purpose & intent.</span>
 						</h2>
 					</div>
-					<div class="lg:col-span-8 space-y-6 text-zinc-300 text-base sm:text-lg leading-relaxed font-light">
+					<div class="lg:col-span-8 space-y-6 text-zinc-300 text-sm sm:text-lg leading-relaxed font-light">
 						<p>
 							My journey into innovation wasn't sparked solely in a conventional lab—it began with a skateboard, a group of creative friends, and a drive to build something meaningful from scratch. With roots stretching from India to Oklahoma, Northeast Tennessee, and Atlanta, Georgia, I learned early on that true creativity merges technical rigor with authentic expression.
 						</p>
@@ -213,12 +223,12 @@
 		</section>
 
 		<!-- Visual Portfolio Exhibition Matrix -->
-		<section id="exhibition" class="relative z-10 py-24 px-6">
+		<section id="exhibition" class="relative z-10 py-20 sm:py-24 px-6">
 			<div class="max-w-6xl mx-auto space-y-12">
 				<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-white/10 pb-8">
 					<div>
 						<span class="font-mono-tech text-xs text-zinc-400 tracking-[0.25em] uppercase">// 02. VENTURE MATRIX</span>
-						<h2 class="text-4xl sm:text-6xl font-light mt-2 text-white font-serif-editorial">
+						<h2 class="text-3xl sm:text-6xl font-light mt-2 text-white font-serif-editorial">
 							Selected Work <br><span class="italic text-[#E5E2DC]">& Portfolio Matrix.</span>
 						</h2>
 					</div>
@@ -227,17 +237,17 @@
 					</p>
 				</div>
 
-				<!-- Bento Grid with Photos -->
+				<!-- Bento Grid -->
 				<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
 					
 					<!-- Card 1: Flow MedTech (8 cols) -->
-					<div class="md:col-span-8 titanium-glass rounded-3xl p-8 sm:p-10 flex flex-col justify-between space-y-8 group">
+					<div class="md:col-span-8 titanium-glass rounded-3xl p-6 sm:p-10 flex flex-col justify-between space-y-8 group">
 						<div class="space-y-6">
-							<div class="relative h-64 sm:h-80 rounded-2xl overflow-hidden bg-black/60 border border-white/10">
+							<div class="relative h-60 sm:h-80 rounded-2xl overflow-hidden bg-black/60 border border-white/10">
 								<img 
 									src="/structural heart.jpg" 
 									alt="Flow MedTech Cardiovascular Lab" 
-									class="w-full h-full object-cover img-editorial-filter"
+									class="w-full h-full object-cover object-[center_35%] img-editorial-filter"
 								/>
 								<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
 								<span class="absolute top-4 left-4 font-mono-tech text-[10px] px-3 py-1 rounded-full bg-black/60 border border-white/20 text-white">
@@ -250,7 +260,7 @@
 									<span class="font-mono-tech text-xs text-zinc-400 tracking-widest uppercase">CATALOG 001 // MEDTECH IMPLANTS</span>
 									<span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-white text-[10px] font-mono-tech">Co-Founder & CTO</span>
 								</div>
-								<h3 class="text-3xl font-light text-white font-serif-editorial group-hover:text-zinc-200 transition-colors">Flow MedTech</h3>
+								<h3 class="text-2xl sm:text-3xl font-light text-white font-serif-editorial group-hover:text-zinc-200 transition-colors">Flow MedTech</h3>
 								<p class="text-zinc-300 text-sm sm:text-base leading-relaxed font-light">
 									Co-founded and led Chief Technology Officer operations for polymer-based Left Atrial Appendage (LAA) occlusion heart implants to eliminate stroke risk in AFib patients without long-term blood thinners. Conducted clinical research across 100+ clinicians. Client company of the Cleveland Clinic Global Cardiovascular Innovation Center (GCIC).
 								</p>
@@ -263,18 +273,18 @@
 						</div>
 					</div>
 
-					<!-- Card 2: 2x 40 Under 40 Distinction (4 cols - Filled Out) -->
-					<div class="md:col-span-4 titanium-glass rounded-3xl p-8 flex flex-col justify-between space-y-6 bg-gradient-to-br from-white/[0.03] to-black/90 group">
+					<!-- Card 2: 2x 40 Under 40 Distinction (4 cols - Filled Out Frame) -->
+					<div class="md:col-span-4 titanium-glass rounded-3xl p-6 sm:p-8 flex flex-col justify-between space-y-6 bg-gradient-to-br from-white/[0.03] to-black/90 group">
 						<div class="space-y-4">
-							<div class="relative h-60 rounded-2xl overflow-hidden bg-[#FAFAFA] p-6 flex items-center justify-center border border-white/20 shadow-inner group-hover:border-amber-300/40 transition-colors duration-500">
+							<div class="relative h-52 sm:h-60 rounded-2xl overflow-hidden bg-[#FAFAFA] p-5 sm:p-6 flex items-center justify-center border border-white/20 shadow-inner group-hover:border-amber-300/40 transition-colors duration-500">
 								<img 
 									src="/40 under 40.png" 
 									alt="Georgia Tech 40 Under 40 Emblem" 
-									class="w-full h-full object-contain transform group-hover:scale-105 transition-transform duration-500"
+									class="max-h-full max-w-full object-contain transform group-hover:scale-105 transition-transform duration-500"
 								/>
 							</div>
 							<span class="font-mono-tech text-xs text-amber-300 tracking-widest uppercase">HONOR & ACCOLADE</span>
-							<h4 class="text-3xl font-light text-white font-serif-editorial">2x 40 Under 40 Honoree</h4>
+							<h4 class="text-2xl sm:text-3xl font-light text-white font-serif-editorial">2x 40 Under 40 Honoree</h4>
 							<p class="text-zinc-400 text-xs leading-relaxed font-light">
 								Awarded by Georgia Tech (2020) and Tri-Cities Business Journal (2021) for inventing cardiovascular stroke-prevention devices and leading multi-industry ventures.
 							</p>
@@ -285,13 +295,13 @@
 					</div>
 
 					<!-- Card 3: Awoken Matter (6 cols) -->
-					<div class="md:col-span-6 titanium-glass rounded-3xl p-8 flex flex-col justify-between space-y-8 group">
+					<div class="md:col-span-6 titanium-glass rounded-3xl p-6 sm:p-8 flex flex-col justify-between space-y-8 group">
 						<div class="space-y-6">
 							<div class="relative h-64 rounded-2xl overflow-hidden bg-black/60 border border-white/10">
 								<img 
 									src="/awoken matter.jpg" 
 									alt="Awoken Matter Renaissance Sweatshirt" 
-									class="w-full h-full object-cover img-editorial-filter"
+									class="w-full h-full object-cover object-[center_25%] img-editorial-filter"
 								/>
 								<span class="absolute top-4 left-4 font-mono-tech text-[10px] px-3 py-1 rounded-full bg-black/60 border border-white/20 text-white">
 									ARCHITECTURAL APPAREL
@@ -303,7 +313,7 @@
 									<span class="font-mono-tech text-xs text-zinc-400 tracking-widest uppercase">CATALOG 002 // PHYSICAL DESIGN</span>
 									<span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-white text-[10px] font-mono-tech">Co-Founder</span>
 								</div>
-								<h3 class="text-3xl font-light text-white font-serif-editorial group-hover:text-zinc-200 transition-colors">Awoken Matter</h3>
+								<h3 class="text-2xl sm:text-3xl font-light text-white font-serif-editorial group-hover:text-zinc-200 transition-colors">Awoken Matter</h3>
 								<p class="text-zinc-400 text-sm leading-relaxed font-light">
 									Luxury architectural streetwear and physical design studio under design house <em>Atehliye</em>. Fusing 450GSM heavyweight fabrications, Renaissance canvas overlays, and structural rigor to treat clothing as personal armor.
 								</p>
@@ -316,7 +326,7 @@
 					</div>
 
 					<!-- Card 4: River Health (6 cols) -->
-					<div class="md:col-span-6 titanium-glass rounded-3xl p-8 flex flex-col justify-between space-y-8 group">
+					<div class="md:col-span-6 titanium-glass rounded-3xl p-6 sm:p-8 flex flex-col justify-between space-y-8 group">
 						<div class="space-y-6">
 							<div class="relative h-64 rounded-2xl overflow-hidden bg-black/60 border border-white/10">
 								<img 
@@ -334,7 +344,7 @@
 									<span class="font-mono-tech text-xs text-emerald-400 tracking-widest uppercase">CATALOG 003 // HEALTHCARE STRATEGY</span>
 									<span class="px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-300 text-[10px] font-mono-tech">Product | Strategy</span>
 								</div>
-								<h3 class="text-3xl font-light text-white font-serif-editorial group-hover:text-emerald-200 transition-colors">River Health</h3>
+								<h3 class="text-2xl sm:text-3xl font-light text-white font-serif-editorial group-hover:text-emerald-200 transition-colors">River Health</h3>
 								<p class="text-zinc-400 text-sm leading-relaxed font-light">
 									Directing end-to-end product development lifecycles from conception to launch. Driving data-informed decision making through key metric analysis, A/B testing, customer interviews, and strategic roadmap leadership.
 								</p>
@@ -347,13 +357,13 @@
 					</div>
 
 					<!-- Card 5: FoundersForge (6 cols) -->
-					<div class="md:col-span-6 titanium-glass rounded-3xl p-8 flex flex-col justify-between space-y-8 group">
+					<div class="md:col-span-6 titanium-glass rounded-3xl p-6 sm:p-8 flex flex-col justify-between space-y-8 group">
 						<div class="space-y-6">
-							<div class="relative h-56 rounded-2xl overflow-hidden bg-black/60 border border-white/10">
+							<div class="relative h-64 sm:h-56 rounded-2xl overflow-hidden bg-black/60 border border-white/10">
 								<img 
 									src="/founders forge.JPG" 
 									alt="FoundersForge Pitches and Pints" 
-									class="w-full h-full object-cover img-editorial-filter"
+									class="w-full h-full object-cover object-center img-editorial-filter"
 								/>
 							</div>
 
@@ -362,7 +372,7 @@
 									<span class="font-mono-tech text-xs text-purple-400 tracking-widest uppercase">CATALOG 004 // VENTURE ECOSYSTEMS</span>
 									<span class="px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-300 text-[10px] font-mono-tech">Co-Founder & EIR</span>
 								</div>
-								<h3 class="text-3xl font-light text-white font-serif-editorial group-hover:text-purple-200 transition-colors">FoundersForge</h3>
+								<h3 class="text-2xl sm:text-3xl font-light text-white font-serif-editorial group-hover:text-purple-200 transition-colors">FoundersForge</h3>
 								<p class="text-zinc-400 text-sm leading-relaxed font-light">
 									Co-founded in Johnson City, TN, cultivating a regional network connecting 26+ ventures and 45+ mentors. Served as Entrepreneur in Residence at The Angel Roundtable, guiding investment due diligence and venture screening.
 								</p>
@@ -375,13 +385,13 @@
 					</div>
 
 					<!-- Card 6: Deloitte Cortex (6 cols) -->
-					<div class="md:col-span-6 titanium-glass rounded-3xl p-8 flex flex-col justify-between space-y-8 group">
+					<div class="md:col-span-6 titanium-glass rounded-3xl p-6 sm:p-8 flex flex-col justify-between space-y-8 group">
 						<div class="space-y-6">
-							<div class="relative h-56 rounded-2xl overflow-hidden bg-black/60 border border-white/10">
+							<div class="relative h-64 sm:h-56 rounded-2xl overflow-hidden bg-black/60 border border-white/10">
 								<img 
 									src="/Deloitte.jpg" 
 									alt="Deloitte Executive Delivery" 
-									class="w-full h-full object-cover img-editorial-filter"
+									class="w-full h-full object-cover object-top img-editorial-filter"
 								/>
 							</div>
 
@@ -390,7 +400,7 @@
 									<span class="font-mono-tech text-xs text-blue-400 tracking-widest uppercase">CATALOG 005 // ENTERPRISE SYSTEMS</span>
 									<span class="px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-300 text-[10px] font-mono-tech">Product Delivery Lead</span>
 								</div>
-								<h3 class="text-3xl font-light text-white font-serif-editorial group-hover:text-blue-200 transition-colors">Deloitte (Cortex)</h3>
+								<h3 class="text-2xl sm:text-3xl font-light text-white font-serif-editorial group-hover:text-blue-200 transition-colors">Deloitte (Cortex)</h3>
 								<p class="text-zinc-400 text-sm leading-relaxed font-light">
 									Managed large-scale data extraction and analytics tool rollouts within Audit & Assurance. Implemented vendor management strategies that boosted response times by 94% and maintained 95%+ Agile delivery success.
 								</p>
@@ -407,8 +417,8 @@
 		</section>
 
 		<!-- Credentials & Awards Section -->
-		<section id="distinction" class="relative z-10 py-24 px-6">
-			<div class="max-w-6xl mx-auto titanium-glass rounded-3xl p-8 sm:p-16 border border-white/10 space-y-12">
+		<section id="distinction" class="relative z-10 py-20 sm:py-24 px-6">
+			<div class="max-w-6xl mx-auto titanium-glass rounded-3xl p-6 sm:p-16 border border-white/10 space-y-12">
 				<div class="space-y-4">
 					<span class="font-mono-tech text-xs text-amber-300 tracking-[0.25em] uppercase">// 03. HONORS, AWARDS & CERTIFICATIONS</span>
 					<h2 class="text-3xl sm:text-5xl font-light leading-tight text-white font-serif-editorial">
@@ -480,12 +490,12 @@
 		</section>
 
 		<!-- Passions, Culture & Global Perspective Section -->
-		<section id="culture" class="relative z-10 py-24 px-6 bg-black/80 border-y border-white/10">
+		<section id="culture" class="relative z-10 py-20 sm:py-24 px-6 bg-black/80 border-y border-white/10">
 			<div class="max-w-6xl mx-auto space-y-12">
 				<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-white/10 pb-8">
 					<div>
 						<span class="font-mono-tech text-xs text-zinc-400 tracking-[0.25em] uppercase">// 04. CULTURE, PASSIONS & EXPRESSION</span>
-						<h2 class="text-4xl sm:text-6xl font-light mt-2 text-white font-serif-editorial">
+						<h2 class="text-3xl sm:text-6xl font-light mt-2 text-white font-serif-editorial">
 							Driven by <br><span class="italic text-[#E5E2DC]">global perspective & creative expression.</span>
 						</h2>
 					</div>
@@ -497,12 +507,12 @@
 				<div class="grid grid-cols-1 md:grid-cols-3 gap-8 font-mono-tech">
 					
 					<!-- Passions Card 1: Travel -->
-					<div class="titanium-glass rounded-3xl p-8 space-y-6 group">
-						<div class="relative h-56 rounded-2xl overflow-hidden bg-black/60 border border-white/10">
+					<div class="titanium-glass rounded-3xl p-6 sm:p-8 space-y-6 group">
+						<div class="relative h-64 sm:h-56 rounded-2xl overflow-hidden bg-black/60 border border-white/10">
 							<img 
 								src="/travel.jpeg" 
 								alt="Global Travel Ocean Sunset" 
-								class="w-full h-full object-cover img-editorial-filter"
+								class="w-full h-full object-cover object-center img-editorial-filter"
 							/>
 						</div>
 						<div class="space-y-2">
@@ -515,12 +525,12 @@
 					</div>
 
 					<!-- Passions Card 2: Fine Art & Cars -->
-					<div class="titanium-glass rounded-3xl p-8 space-y-6 group">
-						<div class="relative h-56 rounded-2xl overflow-hidden bg-black/60 border border-white/10">
+					<div class="titanium-glass rounded-3xl p-6 sm:p-8 space-y-6 group">
+						<div class="relative h-64 sm:h-56 rounded-2xl overflow-hidden bg-black/60 border border-white/10">
 							<img 
 								src="/cars.jpeg" 
 								alt="Classic Porsche Steering Wheel & Interior" 
-								class="w-full h-full object-cover img-editorial-filter"
+								class="w-full h-full object-cover object-center img-editorial-filter"
 							/>
 						</div>
 						<div class="space-y-2">
@@ -533,12 +543,12 @@
 					</div>
 
 					<!-- Passions Card 3: Speaking & Workshops -->
-					<div class="titanium-glass rounded-3xl p-8 space-y-6 group">
-						<div class="relative h-56 rounded-2xl overflow-hidden bg-black/60 border border-white/10">
+					<div class="titanium-glass rounded-3xl p-6 sm:p-8 space-y-6 group">
+						<div class="relative h-64 sm:h-56 rounded-2xl overflow-hidden bg-black/60 border border-white/10">
 							<img 
 								src="/keynote.png" 
 								alt="Arnab Speaking at Keynote Workshop" 
-								class="w-full h-full object-cover img-editorial-filter"
+								class="w-full h-full object-cover object-[center_15%] img-editorial-filter"
 							/>
 						</div>
 						<div class="space-y-2">
@@ -555,11 +565,11 @@
 		</section>
 
 		<!-- Trend Forecasts Section -->
-		<section id="forecasts" class="relative z-10 py-24 px-6">
+		<section id="forecasts" class="relative z-10 py-20 sm:py-24 px-6">
 			<div class="max-w-5xl mx-auto space-y-12">
 				<div class="space-y-2 border-b border-white/10 pb-6">
 					<span class="font-mono-tech text-xs text-zinc-400 tracking-[0.25em] uppercase">// 05. FORESIGHT & ESSAYS</span>
-					<h2 class="text-4xl sm:text-5xl font-light text-white font-serif-editorial">
+					<h2 class="text-3xl sm:text-5xl font-light text-white font-serif-editorial">
 						Foresight & <br><span class="italic text-[#E5E2DC]">Trend Perspectives.</span>
 					</h2>
 				</div>
@@ -572,7 +582,7 @@
 								<span>•</span>
 								<span>5 MIN READ</span>
 							</div>
-							<h3 class="text-2xl font-light text-white font-serif-editorial group-hover:text-amber-200 transition-colors">
+							<h3 class="text-xl sm:text-2xl font-light text-white font-serif-editorial group-hover:text-amber-200 transition-colors">
 								Polymer Devices vs. Metallic Frames: The Future of LAA Stroke Prevention
 							</h3>
 						</div>
@@ -588,7 +598,7 @@
 								<span>•</span>
 								<span>4 MIN READ</span>
 							</div>
-							<h3 class="text-2xl font-light text-white font-serif-editorial group-hover:text-amber-200 transition-colors">
+							<h3 class="text-xl sm:text-2xl font-light text-white font-serif-editorial group-hover:text-amber-200 transition-colors">
 								Clothing as Personal Armor: Transforming Physical Canvas in Luxury Streetwear
 							</h3>
 						</div>
@@ -604,7 +614,7 @@
 								<span>•</span>
 								<span>6 MIN READ</span>
 							</div>
-							<h3 class="text-2xl font-light text-white font-serif-editorial group-hover:text-amber-200 transition-colors">
+							<h3 class="text-xl sm:text-2xl font-light text-white font-serif-editorial group-hover:text-amber-200 transition-colors">
 								Capital Readiness Beyond Major Hubs: Lessons from Scaling 26+ Regional Startups
 							</h3>
 						</div>
@@ -617,11 +627,11 @@
 		</section>
 
 		<!-- Footer / Direct Engagement -->
-		<footer id="contact" class="relative z-10 py-24 px-6 border-t border-white/10 bg-black/90">
+		<footer id="contact" class="relative z-10 py-20 sm:py-24 px-6 border-t border-white/10 bg-black/90">
 			<div class="max-w-6xl mx-auto flex flex-col lg:flex-row justify-between items-start lg:items-center gap-12">
 				<div class="space-y-4 max-w-xl">
 					<span class="font-mono-tech text-xs text-zinc-400 tracking-[0.25em] uppercase">// DIRECT ENGAGEMENT</span>
-					<h2 class="text-4xl sm:text-5xl font-light text-white font-serif-editorial">
+					<h2 class="text-3xl sm:text-5xl font-light text-white font-serif-editorial">
 						Let's build <br><span class="italic text-[#E5E2DC]">what's next.</span>
 					</h2>
 					<p class="text-zinc-400 text-sm font-light leading-relaxed">
