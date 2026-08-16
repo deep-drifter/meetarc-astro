@@ -57,13 +57,14 @@
 			.font-mono-tech {
 				font-family: 'Space Mono', monospace;
 			}
+			/* Restored Black & White to Full Color Hover Physics */
 			.img-editorial-filter {
-				filter: grayscale(10%) contrast(105%);
-				transition: filter 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+				filter: grayscale(100%) contrast(110%) brightness(85%);
+				transition: filter 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 			}
 			.group:hover .img-editorial-filter {
-				filter: grayscale(0%) contrast(100%);
-				transform: scale(1.04);
+				filter: grayscale(0%) contrast(100%) brightness(100%);
+				transform: scale(1.05);
 			}
 		</style>
 	</head>
@@ -262,14 +263,14 @@
 						</div>
 					</div>
 
-					<!-- Card 2: 2x 40 Under 40 Distinction (4 cols) -->
-					<div class="md:col-span-4 titanium-glass rounded-3xl p-8 flex flex-col justify-between space-y-6 bg-gradient-to-br from-white/[0.03] to-black/90">
+					<!-- Card 2: 2x 40 Under 40 Distinction (4 cols - Filled Out) -->
+					<div class="md:col-span-4 titanium-glass rounded-3xl p-8 flex flex-col justify-between space-y-6 bg-gradient-to-br from-white/[0.03] to-black/90 group">
 						<div class="space-y-4">
-							<div class="relative h-48 rounded-2xl overflow-hidden bg-white p-4 flex items-center justify-center border border-white/10">
+							<div class="relative h-60 rounded-2xl overflow-hidden bg-[#FAFAFA] p-6 flex items-center justify-center border border-white/20 shadow-inner group-hover:border-amber-300/40 transition-colors duration-500">
 								<img 
 									src="/40 under 40.png" 
 									alt="Georgia Tech 40 Under 40 Emblem" 
-									class="max-h-full object-contain"
+									class="w-full h-full object-contain transform group-hover:scale-105 transition-transform duration-500"
 								/>
 							</div>
 							<span class="font-mono-tech text-xs text-amber-300 tracking-widest uppercase">HONOR & ACCOLADE</span>
