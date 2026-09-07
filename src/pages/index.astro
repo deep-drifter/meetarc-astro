@@ -1,5 +1,5 @@
 ---
-// Astro Page Component - Arnab Chakraborty Complete Responsive Portfolio
+// Astro Page Component - Arnab Chakraborty Complete Portfolio
 ---
 
 <html lang="en" class="scroll-smooth">
@@ -33,7 +33,6 @@
 					linear-gradient(to right, rgba(229, 226, 220, 0.025) 1px, transparent 1px),
 					linear-gradient(to bottom, rgba(229, 226, 220, 0.025) 1px, transparent 1px);
 			}
-			/* High-opacity nav glass preventing text bleed-through on scroll */
 			.nav-glass {
 				background: rgba(8, 8, 7, 0.95);
 				backdrop-filter: blur(24px) saturate(180%);
@@ -59,13 +58,13 @@
 				font-family: 'Space Mono', monospace;
 			}
 
-			/* MOBILE & TOUCH DEVICES: Full vibrant color by default */
+			/* Mobile & Touch Devices: Full vibrant color by default */
 			.img-editorial-filter {
 				filter: grayscale(0%) contrast(100%) brightness(100%);
 				transition: filter 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 			}
 
-			/* DESKTOP WITH MOUSE: B&W by default, reveals full color on hover */
+			/* Desktop with Mouse: B&W by default, reveals full color on hover */
 			@media (hover: hover) and (pointer: fine) {
 				.img-editorial-filter {
 					filter: grayscale(100%) contrast(110%) brightness(85%);
@@ -564,7 +563,7 @@
 			</div>
 		</section>
 
-				<!-- Trend Forecasts & Published Essays Section -->
+		<!-- Interactive Trend Forecasts & Published Essays Section -->
 		<section id="forecasts" class="relative z-10 py-20 sm:py-24 px-6">
 			<div class="max-w-5xl mx-auto space-y-12">
 				<div class="space-y-2 border-b border-white/10 pb-6">
@@ -577,7 +576,10 @@
 				<div class="space-y-4">
 					
 					<!-- Article 1: Structural Heart -->
-					<article class="titanium-glass p-6 sm:p-8 rounded-2xl flex flex-col sm:flex-row justify-between sm:items-center gap-6 group cursor-pointer">
+					<article 
+						onclick="openEssay(1)" 
+						class="titanium-glass p-6 sm:p-8 rounded-2xl flex flex-col sm:flex-row justify-between sm:items-center gap-6 group cursor-pointer hover:border-amber-300/40 transition-all"
+					>
 						<div class="space-y-2 max-w-2xl">
 							<div class="flex items-center gap-3 font-mono-tech text-xs text-zinc-500">
 								<span>STRUCTURAL HEART & MATERIALS</span>
@@ -588,13 +590,16 @@
 								The Polymer Imperative: Why the Future of Structural Heart Devices Is Non-Metallic
 							</h3>
 						</div>
-						<div class="font-mono-tech text-xs text-white flex items-center gap-2 group-hover:translate-x-2 transition-transform">
+						<div class="font-mono-tech text-xs text-amber-300 flex items-center gap-2 group-hover:translate-x-2 transition-transform">
 							READ ESSAY <span>→</span>
 						</div>
 					</article>
 
 					<!-- Article 2: Architectural Apparel -->
-					<article class="titanium-glass p-6 sm:p-8 rounded-2xl flex flex-col sm:flex-row justify-between sm:items-center gap-6 group cursor-pointer">
+					<article 
+						onclick="openEssay(2)" 
+						class="titanium-glass p-6 sm:p-8 rounded-2xl flex flex-col sm:flex-row justify-between sm:items-center gap-6 group cursor-pointer hover:border-amber-300/40 transition-all"
+					>
 						<div class="space-y-2 max-w-2xl">
 							<div class="flex items-center gap-3 font-mono-tech text-xs text-zinc-500">
 								<span>PHYSICAL DESIGN & APPAREL</span>
@@ -605,13 +610,16 @@
 								Clothing as Armor: Applying Biomedical Precision to Architectural Apparel
 							</h3>
 						</div>
-						<div class="font-mono-tech text-xs text-white flex items-center gap-2 group-hover:translate-x-2 transition-transform">
+						<div class="font-mono-tech text-xs text-amber-300 flex items-center gap-2 group-hover:translate-x-2 transition-transform">
 							READ ESSAY <span>→</span>
 						</div>
 					</article>
 
 					<!-- Article 3: Venture Infrastructure -->
-					<article class="titanium-glass p-6 sm:p-8 rounded-2xl flex flex-col sm:flex-row justify-between sm:items-center gap-6 group cursor-pointer">
+					<article 
+						onclick="openEssay(3)" 
+						class="titanium-glass p-6 sm:p-8 rounded-2xl flex flex-col sm:flex-row justify-between sm:items-center gap-6 group cursor-pointer hover:border-amber-300/40 transition-all"
+					>
 						<div class="space-y-2 max-w-2xl">
 							<div class="flex items-center gap-3 font-mono-tech text-xs text-zinc-500">
 								<span>VENTURE INFRASTRUCTURE</span>
@@ -619,16 +627,19 @@
 								<span>6 MIN READ</span>
 							</div>
 							<h3 class="text-xl sm:text-2xl font-light text-white font-serif-editorial group-hover:text-amber-200 transition-colors">
-								The Anti-Fluff Playbook: Building Capital-Efficient Startup Hubs Beyond Major Hubs
+								The Anti-Fluff Playbook: Building Capital-Efficient Startup Hubs Beyond Major Centers
 							</h3>
 						</div>
-						<div class="font-mono-tech text-xs text-white flex items-center gap-2 group-hover:translate-x-2 transition-transform">
+						<div class="font-mono-tech text-xs text-amber-300 flex items-center gap-2 group-hover:translate-x-2 transition-transform">
 							READ ESSAY <span>→</span>
 						</div>
 					</article>
 
 					<!-- Article 4: Healthcare Strategy -->
-					<article class="titanium-glass p-6 sm:p-8 rounded-2xl flex flex-col sm:flex-row justify-between sm:items-center gap-6 group cursor-pointer">
+					<article 
+						onclick="openEssay(4)" 
+						class="titanium-glass p-6 sm:p-8 rounded-2xl flex flex-col sm:flex-row justify-between sm:items-center gap-6 group cursor-pointer hover:border-amber-300/40 transition-all"
+					>
 						<div class="space-y-2 max-w-2xl">
 							<div class="flex items-center gap-3 font-mono-tech text-xs text-zinc-500">
 								<span>HEALTHCARE STRATEGY</span>
@@ -639,7 +650,7 @@
 								Data-Informed Clinical Empathy: Eliminating Administrative Friction in Healthcare
 							</h3>
 						</div>
-						<div class="font-mono-tech text-xs text-white flex items-center gap-2 group-hover:translate-x-2 transition-transform">
+						<div class="font-mono-tech text-xs text-amber-300 flex items-center gap-2 group-hover:translate-x-2 transition-transform">
 							READ ESSAY <span>→</span>
 						</div>
 					</article>
@@ -647,6 +658,36 @@
 				</div>
 			</div>
 		</section>
+
+		<!-- Interactive Titanium Side-Drawer Modal -->
+		<div id="essay-modal-overlay" onclick="closeEssay()" class="fixed inset-0 z-[100] hidden bg-black/80 backdrop-blur-xl transition-all duration-300">
+			<div onclick="event.stopPropagation()" class="fixed top-0 right-0 w-full sm:w-[680px] h-full bg-[#0A0A09] border-l border-white/15 p-6 sm:p-12 overflow-y-auto shadow-2xl flex flex-col justify-between space-y-8">
+				
+				<div class="space-y-8">
+					<div class="flex items-center justify-between border-b border-white/10 pb-6">
+						<span id="essay-category" class="font-mono-tech text-xs text-amber-300 tracking-widest uppercase">ESSAY ARCHIVE</span>
+						<button onclick="closeEssay()" class="px-4 py-2 rounded-full titanium-glass text-xs font-mono-tech text-white hover:bg-white hover:text-black transition-all">
+							✕ CLOSE
+						</button>
+					</div>
+
+					<div class="space-y-4">
+						<span id="essay-time" class="font-mono-tech text-[10px] text-zinc-500 uppercase tracking-widest"></span>
+						<h2 id="essay-title" class="text-3xl sm:text-4xl font-light text-white font-serif-editorial leading-tight"></h2>
+					</div>
+
+					<div id="essay-content" class="space-y-6 text-zinc-300 font-light text-base sm:text-lg leading-relaxed">
+						<!-- Full essay body injected dynamically via JS -->
+					</div>
+				</div>
+
+				<div class="pt-8 border-t border-white/10 flex items-center justify-between font-mono-tech text-xs text-zinc-500">
+					<span>ARNAB CHAKRABORTY ESSAY ARCHIVE</span>
+					<button onclick="closeEssay()" class="text-white hover:underline">RETURN TO PORTFOLIO ↑</button>
+				</div>
+
+			</div>
+		</div>
 
 		<!-- Footer / Direct Engagement -->
 		<footer id="contact" class="relative z-10 py-20 sm:py-24 px-6 border-t border-white/10 bg-black/90">
@@ -678,6 +719,72 @@
 				</div>
 			</div>
 		</footer>
+
+		<!-- JavaScript Drawer Controller -->
+		<script is:inline>
+			const ESSAYS = {
+				1: {
+					category: "STRUCTURAL HEART & MATERIALS SCIENCE",
+					time: "PUBLISHED ESSAY • 5 MIN READ",
+					title: "The Polymer Imperative: Why the Future of Structural Heart Devices Is Non-Metallic",
+					body: `
+						<p>For decades, cardiovascular device design has been dominated by nitinol and rigid metallic frames. While nitinol enabled the first generation of minimally invasive Left Atrial Appendage (LAA) occlusion devices, metal in the heart comes with trade-offs: permanent tissue friction, risk of erosion, delayed endothelialization, and chronic local inflammatory response.</p>
+						<p>The next frontier of structural heart engineering lies in polymer-based bio-materials. By engineering polymers that match the compliance, stretch, and stress-strain profiles of native cardiac tissue, we can create occlusion implants that integrate seamlessly into the myocardial landscape. A compliant polymer structure accelerates tissue healing over the device face while eliminating the need for long-term anticoagulants.</p>
+						<p>As biomedical engineers, our goal shouldn't merely be plugging a structural anomaly; it must be designing implants that the human body accepts as native tissue.</p>
+					`
+				},
+				2: {
+					category: "PHYSICAL DESIGN & ARCHITECTURAL APPAREL",
+					time: "PUBLISHED ESSAY • 4 MIN READ",
+					title: "Clothing as Armor: Applying Biomedical Precision to Architectural Apparel",
+					body: `
+						<p>Fast fashion transformed apparel into disposable billboards—thin fabrics, slapped-on logos, and planned obsolescence. But historically, clothing was humanity's most intimate form of architecture: our daily armor, our structural footprint, and our physical identity.</p>
+						<p>When you approach apparel design through an engineering lens, fabric selection isn't just about color; it’s about weight, drape, density, and structural integrity. Using 450GSM to 500GSM heavyweight loopback fleece creates a rigid silhouette that holds its form against the body, functioning as physical armor for the wearer.</p>
+						<p>At Awoken Matter and design house Atehliye, we merge this structural rigor with subversion—overlaying classical Renaissance canvas prints with raw, handwritten graffiti. It’s a direct commentary on purpose versus commercial noise: treating the garment not as a commodity, but as a living canvas designed for physical longevity.</p>
+					`
+				},
+				3: {
+					category: "VENTURE INFRASTRUCTURE",
+					time: "PUBLISHED ESSAY • 6 MIN READ",
+					title: "The Anti-Fluff Playbook: Building Capital-Efficient Startup Hubs Beyond Major Centers",
+					body: `
+						<p>The traditional Silicon Valley accelerator playbook is broken for 90% of the world. It teaches founders to prioritize vanity pitch decks, inflated burn rates, and artificial valuation rounds over unit economics, customer discovery, and sustainable cash flow.</p>
+						<p>Building FoundersForge in Northeast Tennessee proved that regional innovation doesn't suffer from a lack of talent—it suffers from a lack of tactical, fluff-free execution. When you connect emerging founders with operators who have built physical products, navigated regulatory compliance, and driven real R&D, you create resilient ecosystems.</p>
+						<p>Capital efficiency is a founder's greatest unfair advantage. By focusing on 100+ clinical or customer interviews before writing a line of code or cutting a mold, startups outside major tech hubs can build defensible businesses that survive market downturns.</p>
+					`
+				},
+				4: {
+					category: "HEALTHCARE STRATEGY",
+					time: "PUBLISHED ESSAY • 5 MIN READ",
+					title: "Data-Informed Clinical Empathy: Eliminating Administrative Friction in Healthcare",
+					body: `
+						<p>The primary cause of clinician burnout and fragmented patient care isn't a lack of medical technology—it’s poorly designed software that places administrative burden over patient outcomes.</p>
+						<p>Modern healthcare product strategy requires bridging the gap between high-level data metrics and frontline clinical realities. Whether launching enterprise analytics tools or consumer health platforms, product leaders must ground their roadmaps in direct user research. Every extra click, confusing dashboard metric, or delayed vendor response time degrades the delivery of care.</p>
+						<p>By applying Agile methodologies, rapid A/B testing, and direct practitioner feedback loops, we can build healthcare platforms that reduce operational friction by 90%+—allowing clinicians and health systems to focus entirely on human wellness.</p>
+					`
+				}
+			};
+
+			function openEssay(id) {
+				const essay = ESSAYS[id];
+				if (!essay) return;
+
+				document.getElementById('essay-category').innerText = essay.category;
+				document.getElementById('essay-time').innerText = essay.time;
+				document.getElementById('essay-title').innerText = essay.title;
+				document.getElementById('essay-content').innerHTML = essay.body;
+
+				const overlay = document.getElementById('essay-modal-overlay');
+				overlay.classList.remove('hidden');
+				document.body.style.overflow = 'hidden';
+			}
+
+			function closeEssay() {
+				const overlay = document.getElementById('essay-modal-overlay');
+				overlay.classList.add('hidden');
+				document.body.style.overflow = 'auto';
+			}
+		</script>
 
 	</body>
 </html>
