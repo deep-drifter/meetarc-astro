@@ -1,5 +1,6 @@
 ---
-// Astro Page Component - Arnab Chakraborty Complete Portfolio with SEO
+// Astro Page Component - Arnab Chakraborty Complete Portfolio
+import '../styles/global.css';
 ---
 
 <html lang="en" class="scroll-smooth">
@@ -47,8 +48,7 @@
 		}
 		</script>
 
-		<!-- Design System Fonts & Tailwind -->
-		<script src="https://cdn.tailwindcss.com"></script>
+		<!-- Fonts -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
@@ -205,6 +205,7 @@
 							<img 
 								src="/Hero image.jpeg" 
 								alt="Arnab Chakraborty Portrait - Connect on LinkedIn" 
+								loading="eager"
 								class="w-full h-full object-cover object-[center_20%] img-editorial-filter"
 							/>
 							<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
@@ -293,6 +294,8 @@
 								<img 
 									src="/structural heart.jpg" 
 									alt="Flow MedTech Cardiovascular Lab" 
+									loading="lazy"
+									decoding="async"
 									class="w-full h-full object-cover object-[center_35%] img-editorial-filter"
 								/>
 								<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
@@ -326,6 +329,8 @@
 								<img 
 									src="/40 under 40.png" 
 									alt="Georgia Tech 40 Under 40 Emblem" 
+									loading="lazy"
+									decoding="async"
 									class="max-h-full max-w-full object-contain transform group-hover:scale-105 transition-transform duration-500"
 								/>
 							</div>
@@ -347,6 +352,8 @@
 								<img 
 									src="/awoken matter.jpg" 
 									alt="Awoken Matter Renaissance Sweatshirt" 
+									loading="lazy"
+									decoding="async"
 									class="w-full h-full object-cover object-[center_25%] img-editorial-filter"
 								/>
 								<span class="absolute top-4 left-4 font-mono-tech text-[10px] px-3 py-1 rounded-full bg-black/60 border border-white/20 text-white">
@@ -378,6 +385,8 @@
 								<img 
 									src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=1000&q=80" 
 									alt="River Health Product Strategy" 
+									loading="lazy"
+									decoding="async"
 									class="w-full h-full object-cover img-editorial-filter"
 								/>
 								<span class="absolute top-4 left-4 font-mono-tech text-[10px] px-3 py-1 rounded-full bg-black/60 border border-white/20 text-white">
@@ -409,6 +418,8 @@
 								<img 
 									src="/founders forge.JPG" 
 									alt="FoundersForge Pitches and Pints" 
+									loading="lazy"
+									decoding="async"
 									class="w-full h-full object-cover object-center img-editorial-filter"
 								/>
 							</div>
@@ -437,6 +448,8 @@
 								<img 
 									src="/Deloitte.jpg" 
 									alt="Deloitte Executive Delivery" 
+									loading="lazy"
+									decoding="async"
 									class="w-full h-full object-cover object-top img-editorial-filter"
 								/>
 							</div>
@@ -558,6 +571,8 @@
 							<img 
 								src="/travel.jpeg" 
 								alt="Global Travel Ocean Sunset" 
+								loading="lazy"
+								decoding="async"
 								class="w-full h-full object-cover object-center img-editorial-filter"
 							/>
 						</div>
@@ -576,6 +591,8 @@
 							<img 
 								src="/cars.jpeg" 
 								alt="Classic Porsche Steering Wheel & Interior" 
+								loading="lazy"
+								decoding="async"
 								class="w-full h-full object-cover object-center img-editorial-filter"
 							/>
 						</div>
@@ -594,6 +611,8 @@
 							<img 
 								src="/keynote.png" 
 								alt="Arnab Speaking at Keynote Workshop" 
+								loading="lazy"
+								decoding="async"
 								class="w-full h-full object-cover object-[center_15%] img-editorial-filter"
 							/>
 						</div>
